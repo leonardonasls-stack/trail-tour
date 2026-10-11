@@ -6,8 +6,30 @@ O formato segue as convenções baseadas em [Keep a Changelog](https://keepachan
 
 ---
 
-## [1.2.0] - 2026-10-11
-### 🚀 Fases 2 e 3 Concluídas: Construção Completa da Interface & Skills Integradas
+## [1.3.0] - 2026-10-11
+### 🚀 Fase 4 Concluída: Segurança Aprofundada & Fluxo de Agendamento Passo a Passo
+
+#### Adicionado
+- **`src/components/sections/SafetyFeatures.jsx`**:
+  - Bloco visual focado na mitigação de risco e valorização da segurança do turista.
+  - 4 pilares: Equipamentos certificados (capacetes higienizados), guias nativos credenciados, treinamento com test-drive inicial na pista da base e manutenção mecânica preventiva diária.
+  - Banner em destaque com imagem real de turistas equipados com capacete e chamada para passeio familiar com velocidade assistida e segura.
+- **`src/components/sections/HowItWorks.jsx`**:
+  - Seção passo a passo com design escuro de alto contraste (`slate-900` e acentos em esmeralda/dourado) detalhando as 3 etapas de conversão sem burocracia:
+    1. Escolha do Roteiro;
+    2. Consulta de Vagas no WhatsApp;
+    3. Chegada na Base com Test-Drive & Saída na Trilha.
+  - Botão de ação direta para iniciar o agendamento no WhatsApp.
+
+#### Modificado
+- **`src/App.jsx`**:
+  - Incorporação sequencial de `SafetyFeatures` e `HowItWorks` entre a apresentação da frota e a galeria de fotos, completando 100% da arquitetura prevista no PRD.
+- **Validação de Build**:
+  - Compilação realizada com sucesso via `npm run build` em 5.46s sem nenhum erro.
+
+---
+
+
 
 #### Adicionado
 - **`src/components/sections/HeroSection.jsx`** (via `atv-hero-designer`):

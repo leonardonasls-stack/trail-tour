@@ -6,6 +6,8 @@ import HeroSection from './components/sections/HeroSection';
 import TrustBadges from './components/sections/TrustBadges';
 import RoutesSection from './components/sections/RoutesSection';
 import FleetSection from './components/sections/FleetSection';
+import SafetyFeatures from './components/sections/SafetyFeatures';
+import HowItWorks from './components/sections/HowItWorks';
 import GallerySection from './components/sections/GallerySection';
 import Testimonials from './components/sections/Testimonials';
 import FaqSection from './components/sections/FaqSection';
@@ -14,12 +16,12 @@ import LocationSection from './components/sections/LocationSection';
 export default function App() {
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col font-sans selection:bg-amber-400 selection:text-slate-950">
-      {/* Barra de Navegação com Glassmorphism */}
+      {/* Barra de Navegação Fixa com Glassmorphism */}
       <TopBar />
 
       {/* Conteúdo Principal da SPA */}
       <main className="flex-1">
-        {/* 1. Hero Section (Aventura pura + CTAs) */}
+        {/* 1. Hero Section (Aventura pura + CTAs duplos) */}
         <HeroSection />
 
         {/* 2. Faixa de Credibilidade / Diferenciais Rápidos */}
@@ -28,19 +30,25 @@ export default function App() {
         {/* 3. Vitrine dos Roteiros de Aventura (Sem Preços) */}
         <RoutesSection />
 
-        {/* 4. Apresentação da Frota Robusta */}
+        {/* 4. Apresentação da Frota Robusta & Capacidade */}
         <FleetSection />
 
-        {/* 5. Galeria com Fotos Reais dos Passeios */}
+        {/* 5. Segurança Avançada, Guias Nativos & Treinamento */}
+        <SafetyFeatures />
+
+        {/* 6. Como Funciona o Agendamento (Passo a passo) */}
+        <HowItWorks />
+
+        {/* 7. Galeria com Fotos Reais dos Passeios */}
         <GallerySection />
 
-        {/* 6. Depoimentos e Avaliações de Turistas */}
+        {/* 8. Depoimentos e Avaliações de Turistas Reais */}
         <Testimonials />
 
-        {/* 7. Perguntas Frequentes & Diretrizes de Segurança */}
+        {/* 9. Perguntas Frequentes & Mitigação de Dúvidas (Acordeão) */}
         <FaqSection />
 
-        {/* 8. Localização da Base & Ponto de Saída */}
+        {/* 10. Localização da Base & Ponto de Saída */}
         <LocationSection />
       </main>
 

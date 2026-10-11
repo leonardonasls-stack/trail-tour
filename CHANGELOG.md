@@ -6,8 +6,27 @@ O formato segue as convenções baseadas em [Keep a Changelog](https://keepachan
 
 ---
 
-## [1.3.0] - 2026-10-11
-### 🚀 Fase 4 Concluída: Segurança Aprofundada & Fluxo de Agendamento Passo a Passo
+## [1.4.0] - 2026-10-11
+### 🚀 Fases 5 e 6 Concluídas: Auditoria Visual Heurística & Otimização Completa de SEO Local
+
+#### Adicionado
+- **SEO & Metadados Avançados em `index.html`**:
+  - Tags Open Graph completas (`og:title`, `og:description`, `og:image`, `og:locale`, `og:site_name`) garantindo preview rico e atrativo em compartilhamentos de links no WhatsApp, Facebook e Instagram.
+  - Cartões do Twitter (`twitter:card`, `twitter:image`).
+  - Metatags de indexação geográfica, robôs e palavras-chave locais de São Miguel dos Milagres / Rota Ecológica dos Corais.
+  - Dados estruturados Schema.org em formato JSON-LD com os tipos `LocalBusiness` e `TouristAttraction`, incluindo geolocalização exata, telefone formatado em E.164, horários e endereço da base física.
+
+#### Modificado
+- **Auditoria Visual & Acessibilidade** (via `atv-visual-auditor`):
+  - Refinamento de contraste nas tags do Hero para garantir legibilidade superior sob iluminação solar intensa (`text-zinc-100`).
+  - Otimização do fluxo responsivo dos micro-badges em telas menores (`grid-cols-1 sm:grid-cols-3` com encapsulamento de fundo translúcido no mobile).
+  - Verificação de ausência de poluição visual ao redor dos botões de Call-to-Action com áreas mínimas de toque >= 48px.
+- **Validação de Build**:
+  - Compilação do bundle final de produção gerada com sucesso via Vite em 5.57s.
+
+---
+
+
 
 #### Adicionado
 - **`src/components/sections/SafetyFeatures.jsx`**:

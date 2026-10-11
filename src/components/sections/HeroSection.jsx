@@ -68,18 +68,18 @@ export default function HeroSection() {
             </div>
 
             {/* Mini Micro-Badges de Confiança */}
-            <div className="pt-4 grid grid-cols-3 gap-3 border-t border-white/10 max-w-lg mx-auto lg:mx-0">
-              <div className="flex items-center gap-2 text-left">
+            <div className="pt-4 grid grid-cols-1 sm:grid-cols-3 gap-3 border-t border-white/10 max-w-lg mx-auto lg:mx-0">
+              <div className="flex items-center gap-2 text-left bg-white/5 sm:bg-transparent p-2 sm:p-0 rounded-lg">
                 <ShieldCheck className="w-5 h-5 text-emerald-400 shrink-0" />
-                <span className="text-xs text-slate-300 font-semibold leading-tight">100% Guiado & Seguro</span>
+                <span className="text-xs text-zinc-100 font-semibold leading-tight">100% Guiado & Seguro</span>
               </div>
-              <div className="flex items-center gap-2 text-left">
+              <div className="flex items-center gap-2 text-left bg-white/5 sm:bg-transparent p-2 sm:p-0 rounded-lg">
                 <Compass className="w-5 h-5 text-amber-400 shrink-0" />
-                <span className="text-xs text-slate-300 font-semibold leading-tight">Quadris Automáticos</span>
+                <span className="text-xs text-zinc-100 font-semibold leading-tight">Quadris Automáticos</span>
               </div>
-              <div className="flex items-center gap-2 text-left">
+              <div className="flex items-center gap-2 text-left bg-white/5 sm:bg-transparent p-2 sm:p-0 rounded-lg">
                 <Star className="w-5 h-5 text-amber-400 shrink-0 fill-amber-400" />
-                <span className="text-xs text-slate-300 font-semibold leading-tight">Nota Máxima 5 Estrelas</span>
+                <span className="text-xs text-zinc-100 font-semibold leading-tight">Nota Máxima 5 Estrelas</span>
               </div>
             </div>
 

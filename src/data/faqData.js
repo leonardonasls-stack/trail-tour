@@ -1,26 +1,37 @@
 export const faqData = [
   {
+    id: "cnh",
     question: "Precisa de carteira de habilitação (CNH) para pilotar?",
-    answer: "Sim! Para pilotar o quadriciclo é necessário possuir CNH (categoria B ou superior) e ter mais de 18 anos. Para a pessoa que vai na garupa (passageiro), não é necessária habilitação."
+    answer: "Para quem vai conduzir o quadriciclo, é exigido possuir CNH válida (categoria B ou superior) e ter idade mínima de 18 anos. No entanto, quem vai como acompanhante (garupa) não precisa ter habilitação."
   },
   {
-    question: "Crianças podem participar do passeio?",
-    answer: "Sim! Crianças a partir de 7 anos podem ir na garupa acompanhadas por um responsável adulto legal, sempre utilizando capacete de proteção adequado fornecido por nossa equipe."
+    id: "criancas",
+    question: "Crianças podem participar do passeio na garupa?",
+    answer: "Sim! Crianças a partir de 7 anos podem participar na garupa acompanhadas pelo pai, mãe ou responsável legal. Fornecemos capacetes de tamanho adequado e o guia mantém um ritmo seguro e confortável durante todo o trajeto."
   },
   {
+    id: "iniciantes",
     question: "Nunca pilotei um quadriciclo antes. Consigo fazer o passeio?",
-    answer: "Com certeza! Nossos quadriciclos são automáticos e muito fáceis de conduzir. Antes do início de cada passeio, nosso guia realiza uma instrução prática com test-drive para garantir que você esteja 100% confiante e seguro."
+    answer: "Perfeitamente! A grande maioria dos nossos clientes está pilotando pela primeira vez. Nossos quadriciclos contam com câmbio automático ou semiautomático muito simples. Antes de ir para a trilha, fazemos uma instrução completa de segurança com test-drive na base até você se sentir 100% confiante."
   },
   {
-    question: "O que devo vestir e levar no dia do passeio?",
-    answer: "Recomendamos roupas leves e confortáveis, tênis ou calçado firme, óculos escuros e protetor solar. Se o roteiro incluir parada para banho, recomendamos levar roupa de banho por baixo e uma toalha."
+    id: "equipamentos",
+    question: "Quais equipamentos de segurança estão inclusos?",
+    answer: "Fornecemos capacetes limpos e higienizados para o condutor e carona. Também orientamos sobre o uso de óculos escuros e calçados fechados ou firmes para maior conforto."
   },
   {
-    question: "E se chover no dia agendado?",
-    answer: "O passeio de quadriciclo na chuva é uma das experiências mais elogiadas por quem gosta de aventura e trilhas de lama! No entanto, se houver chuvas torrenciais ou condições climáticas extremas que comprometam a segurança, reagendamos seu passeio sem nenhum custo."
+    id: "clima-chuva",
+    question: "E se chover no dia do passeio?",
+    answer: "A chuva torna a experiência ainda mais divertida e cheia de adrenalina, proporcionando as famosas trilhas com barro e lama! Porém, em caso de tempestades extremas que possam comprometer a segurança, reagendamos seu horário sem nenhum custo ou complicação."
   },
   {
-    question: "Como funciona a confirmação da reserva?",
-    answer: "É muito simples: basta clicar no botão de WhatsApp, nos informar o roteiro do seu interesse, a data desejada e o número de pessoas. Nossa equipe confirma a disponibilidade na hora e orienta os detalhes da reserva."
+    id: "roupas",
+    question: "O que devo vestir e levar para o passeio?",
+    answer: "Recomendamos roupas leves e confortáveis, protetor solar, óculos escuros e tênis ou sandália presa ao pé. Se o roteiro incluir parada na praia para banho, venha com roupa de banho por baixo e traga uma toalha."
+  },
+  {
+    id: "reserva",
+    question: "Como faço para agendar meu passeio?",
+    answer: "O agendamento é feito direto pelo nosso WhatsApp oficial. Você escolhe o roteiro, a data desejada e a quantidade de quadriciclos. Nossa equipe verifica a disponibilidade na hora e envia todas as orientações."
   }
 ];

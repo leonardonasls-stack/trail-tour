@@ -64,9 +64,9 @@ export default function FaqSection() {
 
         {/* Bloco de Ajuda Rápida no WhatsApp */}
         <div className="mt-12 text-center p-8 rounded-2xl bg-white border border-slate-200 shadow-sm">
-          <HelpCircle className="w-10 h-10 text-emerald-600 mx-auto mb-3" />
-          <h4 className="text-lg font-bold text-slate-900">Ainda tem alguma dúvida específica?</h4>
-          <p className="text-sm text-slate-600 mt-1 max-w-md mx-auto">
+          <HelpCircle className="w-10 h-10 text-emerald-700 mx-auto mb-3" />
+          <h3 className="text-xl font-black text-slate-900">Ainda tem alguma dúvida específica?</h3>
+          <p className="text-sm text-slate-700 mt-1 max-w-md mx-auto">
             Nossa equipe de guias e atendimento está disponível para esclarecer qualquer detalhe pelo WhatsApp.
           </p>
           <div className="mt-5">

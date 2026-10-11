@@ -60,16 +60,16 @@ export default function RouteCard({ route }) {
 
           {/* Paradas & Itinerário */}
           <div className="pt-2">
-            <span className="text-xs font-black uppercase tracking-wider text-slate-400 block mb-2">
+            <span className="text-xs font-black uppercase tracking-wider text-slate-700 block mb-2">
               Principais Paradas:
             </span>
             <ul className="space-y-1.5">
               {route.stops.map((stop, idx) => (
-                <li key={idx} className="flex items-start gap-2 text-xs text-slate-700">
-                  <MapPin className="w-3.5 h-3.5 text-amber-500 shrink-0 mt-0.5" />
+                <li key={idx} className="flex items-start gap-2 text-xs text-slate-800">
+                  <MapPin className="w-3.5 h-3.5 text-amber-600 shrink-0 mt-0.5" />
                   <div>
                     <strong className="text-slate-900">{stop.name}:</strong>{' '}
-                    <span className="text-slate-500">{stop.detail}</span>
+                    <span className="text-slate-600">{stop.detail}</span>
                   </div>
                 </li>
               ))}
@@ -77,17 +77,17 @@ export default function RouteCard({ route }) {
           </div>
 
           {/* O que está incluso */}
-          <div className="pt-2 border-t border-slate-100">
-            <span className="text-xs font-black uppercase tracking-wider text-slate-400 block mb-2">
+          <div className="pt-2 border-t border-slate-200">
+            <span className="text-xs font-black uppercase tracking-wider text-slate-700 block mb-2">
               Incluso no passeio:
             </span>
             <div className="flex flex-wrap gap-2">
               {route.includes.map((inc, idx) => (
                 <span
                   key={idx}
-                  className="inline-flex items-center gap-1 text-[11px] font-medium text-slate-700 bg-slate-100/80 px-2.5 py-1 rounded-md"
+                  className="inline-flex items-center gap-1 text-[11px] font-semibold text-slate-800 bg-slate-100 px-2.5 py-1 rounded-md"
                 >
-                  <CheckCircle className="w-3 h-3 text-emerald-600 shrink-0" />
+                  <CheckCircle className="w-3 h-3 text-emerald-700 shrink-0" />
                   {inc}
                 </span>
               ))}
@@ -96,7 +96,7 @@ export default function RouteCard({ route }) {
         </div>
 
         {/* CTA Inteligente de Conversão sem preço */}
-        <div className="pt-4 border-t border-slate-100">
+        <div className="pt-4 border-t border-slate-200">
           <Button
             href={getWhatsAppUrl(route.title)}
             target="_blank"
@@ -108,7 +108,7 @@ export default function RouteCard({ route }) {
           >
             Consultar Vagas no WhatsApp
           </Button>
-          <span className="block text-center text-[11px] text-slate-400 mt-2 font-medium">
+          <span className="block text-center text-[11px] text-slate-600 mt-2 font-semibold">
             Tarifas e disponibilidade confirmadas na hora
           </span>
         </div>

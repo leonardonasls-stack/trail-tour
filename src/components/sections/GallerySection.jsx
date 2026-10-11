@@ -43,9 +43,9 @@ export default function GallerySection() {
                   <span className="text-[10px] uppercase tracking-wider text-amber-400 font-bold block">
                     {item.category}
                   </span>
-                  <h4 className="text-sm font-bold text-white leading-tight">
+                  <h3 className="text-sm font-bold text-white leading-tight">
                     {item.title}
-                  </h4>
+                  </h3>
                 </div>
               </div>
             );

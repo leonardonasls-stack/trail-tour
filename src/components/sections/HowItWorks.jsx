@@ -57,15 +57,15 @@ export default function HowItWorks() {
                     <div className="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
                       <Icon className="w-6 h-6" />
                     </div>
-                    <span className="text-3xl font-black text-white/20">
+                    <span className="text-3xl font-black text-slate-300">
                       {step.number}
                     </span>
                   </div>
 
-                  <h4 className="text-xl font-bold text-white mb-2 leading-snug">
+                  <h3 className="text-xl font-bold text-white mb-2 leading-snug">
                     {step.title}
-                  </h4>
-                  <p className="text-sm text-slate-300 leading-relaxed">
+                  </h3>
+                  <p className="text-sm text-slate-200 leading-relaxed">
                     {step.description}
                   </p>
                 </div>

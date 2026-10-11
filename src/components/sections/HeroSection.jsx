@@ -105,7 +105,7 @@ export default function HeroSection() {
                 {/* Legenda na imagem */}
                 <div className="absolute bottom-4 left-4 right-4 text-left">
                   <span className="text-xs uppercase tracking-widest text-slate-300 font-semibold block">Costa dos Corais / AL</span>
-                  <h3 className="text-lg font-bold text-white leading-tight">Passeios diários das 8h às 18h</h3>
+                  <p className="text-lg font-bold text-white leading-tight">Passeios diários das 8h às 18h</p>
                 </div>
               </div>
             </div>

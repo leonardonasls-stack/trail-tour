@@ -19,12 +19,12 @@ export default function SectionHeader({
     <div className={`max-w-3xl mb-12 sm:mb-16 ${alignStyles[align]} ${className}`}>
       {badge && (
         <div className="mb-3">
-          <span className={`inline-block px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-widest ${
+          <span className={`inline-block px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-widest ${
             badgeVariant === 'emerald'
-              ? 'bg-emerald-500/10 text-emerald-700 border border-emerald-500/20'
+              ? 'bg-emerald-800 text-white'
               : badgeVariant === 'amber'
-              ? 'bg-amber-500/10 text-amber-600 border border-amber-500/20'
-              : 'bg-slate-200/60 text-slate-700 border border-slate-300'
+              ? 'bg-amber-500 text-slate-950'
+              : 'bg-slate-800 text-white'
           }`}>
             {badge}
           </span>

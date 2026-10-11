@@ -10,14 +10,14 @@ export default function FloatingWhatsApp() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Falar no WhatsApp"
-        className="group relative flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-4 py-3.5 rounded-full shadow-lg shadow-emerald-900/20 hover:shadow-xl hover:shadow-emerald-900/30 transition-all hover:scale-105"
+        className="group relative flex items-center gap-2 bg-[#075E54] hover:bg-[#054c44] text-white px-4 py-3.5 rounded-full shadow-lg shadow-slate-950/40 hover:shadow-xl transition-all hover:scale-105"
       >
         <span className="absolute -top-1 -right-1 flex h-3.5 w-3.5">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
           <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-amber-400"></span>
         </span>
         <MessageCircle className="w-6 h-6 fill-white" />
-        <span className="text-sm font-bold pr-1 hidden sm:inline-block">
+        <span className="text-sm font-black pr-1 hidden sm:inline-block tracking-wide">
           Agendar Passeio
         </span>
       </a>

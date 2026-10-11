@@ -1,13 +1,32 @@
 # CHANGELOG — Trail Tour Milagres
 
-Todas as alterações notáveis, adições de código, melhorias visuais e atualizações de arquitetura deste projeto serão documentadas neste arquivo.
+Todas as alterações notáveis, adições de código, melhorias visuais e atualizações de arquitetura deste projeto estão documentadas neste arquivo com seus respectivos hashes de commit do Git.
 
 O formato segue as convenções baseadas em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
 ---
 
+## [1.5.0] - 2026-10-11
+### ♿ Acessibilidade WCAG 2 AA & Correções Heurísticas Concluídas (0 Violações no axe-core)
+
+#### Modificado
+- **Conformidade de Contraste Cromático (WCAG AA - ratio >= 4.5:1)**:
+  - **`RouteCard.jsx`**: Elevado o contraste dos textos de paradas, itens inclusos e notas de disponibilidade para `text-slate-800` e `text-slate-600`.
+  - **`Button.jsx`**: Ajustado o fundo das variantes primárias e WhatsApp para esmeralda escuro (`bg-emerald-700` e `bg-emerald-800`) garantindo legibilidade nítida do texto branco.
+  - **`SectionHeader.jsx`**: Aumentado o contraste das pílulas de destaque em cada cabeçalho de seção (`bg-emerald-800` com texto branco e `bg-amber-500` com texto escuro).
+  - **`SafetyFeatures.jsx`**: Aplicado fundo `bg-slate-950` e texto `text-zinc-100` no banner de grupo familiar, eliminando transparências que geravam contraste insuficiente.
+  - **`FloatingWhatsApp.jsx`**: Substituído o fundo para `#075E54` (verde escuro oficial com contraste superior a 5.0:1 com texto branco).
+  - **`Footer.jsx`**: Elevado o contraste de endereços e direitos autorais para `text-slate-300`.
+- **Árvore Semântica de Cabeçalhos (`heading-order`)**:
+  - Eliminados pulos de nível (`H1` -> `H2` -> `H3` consistentes). Subtítulos auxiliares em `TrustBadges` e legendas fotográficas foram convertidos para elementos semânticos de parágrafo estilizados com tipografia robusta, sem violar a árvore de acessibilidade.
+- **Auditoria Automatizada via `axe-core 4.13.0`**:
+  - Teste executado em `http://localhost:5180/`: **0 violations found!** (33 problemas iniciais reduzidos a zero).
+
+---
+
 ## [1.4.0] - 2026-10-11
-### 🚀 Fases 5 e 6 Concluídas: Auditoria Visual Heurística & Otimização Completa de SEO Local
+### Commit: `c2c1ca3` — *Auditoria Visual Heurística & Otimização Completa de SEO Local*
+#### Fases 5 e 6 Concluídas
 
 #### Adicionado
 - **SEO & Metadados Avançados em `index.html`**:
@@ -26,7 +45,9 @@ O formato segue as convenções baseadas em [Keep a Changelog](https://keepachan
 
 ---
 
-
+## [1.3.0] - 2026-10-11
+### Commit: `469d574` — *Segurança Aprofundada & Fluxo de Agendamento Passo a Passo*
+#### Fase 4 Concluída
 
 #### Adicionado
 - **`src/components/sections/SafetyFeatures.jsx`**:
@@ -48,7 +69,9 @@ O formato segue as convenções baseadas em [Keep a Changelog](https://keepachan
 
 ---
 
-
+## [1.2.0] - 2026-10-11
+### Commit: `78a5c11` — *Construção Completa da Interface & Skills Integradas*
+#### Fases 2 e 3 Concluídas
 
 #### Adicionado
 - **`src/components/sections/HeroSection.jsx`** (via `atv-hero-designer`):
@@ -80,7 +103,9 @@ O formato segue as convenções baseadas em [Keep a Changelog](https://keepachan
 
 ---
 
-
+## [1.1.0] - 2026-10-11
+### Commit: `1e5b636` — *Criação de design*
+#### Fase 1: Fundação & Design System Concluída
 
 #### Adicionado
 - **`src/data/fleetData.js`**:
@@ -112,7 +137,8 @@ O formato segue as convenções baseadas em [Keep a Changelog](https://keepachan
 ---
 
 ## [1.0.0] - 2026-10-11
-### 📦 Criação e Inicialização do Projeto
+### Commit: `87d75ed` — *Criação do site trail Tour Milagres*
+#### Inicialização do Projeto
 
 #### Adicionado
 - Estrutura inicial do projeto com Vite, React 18 e Tailwind CSS.

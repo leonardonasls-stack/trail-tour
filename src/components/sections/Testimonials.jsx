@@ -43,10 +43,10 @@ export default function Testimonials() {
               {/* Informações do Turista */}
               <div className="pt-6 mt-6 border-t border-slate-200 flex items-center justify-between">
                 <div>
-                  <h4 className="font-bold text-slate-900 text-sm">{t.name}</h4>
-                  <span className="text-xs text-slate-500">{t.location}</span>
+                  <h3 className="font-bold text-slate-900 text-sm">{t.name}</h3>
+                  <span className="text-xs text-slate-600">{t.location}</span>
                 </div>
-                <span className="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100">
+                <span className="text-[11px] font-semibold text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">
                   {t.tour}
                 </span>
               </div>

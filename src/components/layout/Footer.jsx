@@ -111,8 +111,8 @@ export default function Footer() {
                   {companyData.instagramHandle}
                 </a>
               </li>
-              <li className="flex items-start gap-2 pt-1 text-slate-500">
-                <MapPin className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" />
+              <li className="flex items-start gap-2 pt-1 text-slate-300">
+                <MapPin className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                 <span>{companyData.address}</span>
               </li>
             </ul>
@@ -121,7 +121,7 @@ export default function Footer() {
         </div>
 
         {/* Linha Inferior de Direitos Autorais */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-300 gap-4">
           <p>© {currentYear} {companyData.name}. Todos os direitos reservados.</p>
           <p className="flex items-center gap-1 text-slate-300">
             Segurança em 1º Lugar <Shield className="w-3.5 h-3.5 text-emerald-400" /> São Miguel dos Milagres - AL

@@ -6,8 +6,40 @@ O formato segue as convenções baseadas em [Keep a Changelog](https://keepachan
 
 ---
 
-## [1.1.0] - 2026-10-11
-### 🚀 Fase 1: Fundação & Design System Concluída
+## [1.2.0] - 2026-10-11
+### 🚀 Fases 2 e 3 Concluídas: Construção Completa da Interface & Skills Integradas
+
+#### Adicionado
+- **`src/components/sections/HeroSection.jsx`** (via `atv-hero-designer`):
+  - Hero com alto contraste (`slate-950`), overlay tático, tipografia imersiva e agressiva em caixa alta, badges de destaque, chamada de ação dupla com área de toque >= 48px e card flutuante em glassmorphism.
+- **`src/components/sections/TrustBadges.jsx`**:
+  - Grid de 4 cartões de credibilidade em glassmorphism com ícones coloridos para segurança, guias nativos, test-drive e fotos inclusas.
+- **`src/components/sections/RoutesSection.jsx` & `RouteCard.jsx`** (via `atv-route-visualizer`):
+  - Apresentação completa dos 3 circuitos turísticos sem exibição de preços, contendo badges de tempo, nível de dificuldade semântico (`Fácil`, `Moderado`), terreno da trilha, lista de paradas fotográficas, itens inclusos e CTA personalizado via WhatsApp.
+- **`src/components/sections/FleetSection.jsx`** (via `atv-fleet-display`):
+  - Vitrine técnica de quadriciclos enfatizando motorização (420cc e 500cc), capacidade piloto/garupa, transmissão automática/semiautomática, tração 4x4 e CTA específico por modelo.
+- **`src/components/sections/GallerySection.jsx`**:
+  - Mosaico fluido com as 14 fotos reais de alta definição captadas nos passeios em São Miguel dos Milagres, com cards expansivos e chamada para o Instagram oficial.
+- **`src/components/sections/Testimonials.jsx`**:
+  - Prova social com avaliações 5 estrelas de turistas reais, cidades de origem e roteiros realizados.
+- **`src/components/sections/FaqSection.jsx`** (via `atv-safety-faq`):
+  - Acordeão interativo mitigando atritos de conversão: regras legais de CNH, participação de crianças na garupa, instrução para iniciantes e política de chuva/lama.
+- **`src/components/sections/LocationSection.jsx`**:
+  - Detalhamento da base na Rua Prefeito Augusto de Barros Falcão, horários de saída, rota para o Google Maps e ponto de encontro.
+- **`src/components/layout/Footer.jsx`**:
+  - Rodapé institucional completo com mapa de links, dados de contato e direitos reservados.
+
+#### Modificado
+- **`src/App.jsx`**:
+  - Orquestração completa de todas as 8 seções da Single Page Application com rolagem suave e navegação contínua.
+- **`src/components/layout/TopBar.jsx`**:
+  - Atualização dos links de navegação para englobar todas as novas seções (`Início`, `Roteiros`, `Frota`, `Galeria`, `Dúvidas`, `Localização`).
+- **Validação de Build**:
+  - Compilação do bundle de produção gerada com sucesso via Vite em 7.34s.
+
+---
+
+
 
 #### Adicionado
 - **`src/data/fleetData.js`**:

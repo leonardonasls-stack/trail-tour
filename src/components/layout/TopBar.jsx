@@ -23,7 +23,7 @@ export default function TopBar() {
   const navLinks = [
     { label: 'Início', href: '#inicio' },
     { label: 'Roteiros', href: '#roteiros' },
-    { label: 'Diferenciais', href: '#diferenciais' },
+    { label: 'Frota', href: '#frota' },
     { label: 'Galeria', href: '#galeria' },
     { label: 'Dúvidas', href: '#duvidas' },
     { label: 'Localização', href: '#contato' },

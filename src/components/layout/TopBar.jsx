@@ -39,22 +39,17 @@ export default function TopBar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Logo / Marca */}
+          {/* Logo / Marca Oficial */}
           <a
             href="#inicio"
-            className="flex items-center gap-2 group focus:outline-none"
+            className="flex items-center gap-3 group focus:outline-none py-0.5"
+            aria-label="Quadriciclo Milagres Adventure - Início"
           >
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center text-white shadow-md shadow-emerald-500/20 group-hover:scale-105 transition-transform">
-              <Compass className="w-6 h-6 animate-pulse" />
-            </div>
-            <div>
-              <span className="block text-lg font-extrabold tracking-tight text-slate-900 leading-none">
-                {companyData.name}
-              </span>
-              <span className="text-[11px] font-semibold text-emerald-600 uppercase tracking-widest">
-                São Miguel dos Milagres
-              </span>
-            </div>
+            <img
+              src="/images/logo_principal_horizontal.png"
+              alt="Quadriciclo Milagres Adventure"
+              className="h-11 sm:h-14 w-auto object-contain transition-transform group-hover:scale-105 filter drop-shadow-sm"
+            />
           </a>
 
           {/* Links Desktop */}
@@ -63,7 +58,7 @@ export default function TopBar() {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-sm font-semibold text-slate-700 hover:text-emerald-600 transition-colors"
+                className="text-sm font-semibold text-slate-700 hover:text-[#FF7900] transition-colors"
               >
                 {link.label}
               </a>
@@ -76,7 +71,7 @@ export default function TopBar() {
               href={getWhatsAppUrl()}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition-all shadow-md shadow-emerald-600/25 hover:shadow-lg hover:shadow-emerald-600/35 hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold text-white bg-[#FF7900] hover:bg-[#E06800] transition-all shadow-md shadow-[#FF7900]/25 hover:shadow-lg hover:shadow-[#FF7900]/35 hover:-translate-y-0.5"
             >
               <MessageCircle className="w-4 h-4 fill-white" />
               <span>Consultar Vagas</span>
@@ -88,7 +83,7 @@ export default function TopBar() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg text-slate-700 hover:text-emerald-600 hover:bg-white/50 focus:outline-none"
+              className="p-2 rounded-lg text-slate-700 hover:text-[#FF7900] hover:bg-white/50 focus:outline-none"
               aria-label="Abrir menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -106,7 +101,7 @@ export default function TopBar() {
                 key={link.label}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="px-3 py-2 rounded-lg text-base font-semibold text-slate-800 hover:bg-emerald-50 hover:text-emerald-600 transition-colors"
+                className="px-3 py-2 rounded-lg text-base font-semibold text-slate-800 hover:bg-orange-50 hover:text-[#FF7900] transition-colors"
               >
                 {link.label}
               </a>
@@ -117,7 +112,7 @@ export default function TopBar() {
               href={getWhatsAppUrl()}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-base font-bold text-white bg-emerald-600 hover:bg-emerald-700 shadow-md"
+              className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-base font-bold text-white bg-[#FF7900] hover:bg-[#E06800] shadow-md shadow-[#FF7900]/25"
             >
               <MessageCircle className="w-5 h-5 fill-white" />
               <span>Chamar no WhatsApp</span>

@@ -20,11 +20,13 @@ export default function SectionHeader({
       {badge && (
         <div className="mb-3">
           <span className={`inline-block px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-widest ${
-            badgeVariant === 'emerald'
-              ? 'bg-emerald-800 text-white'
+            badgeVariant === 'orange' || badgeVariant === 'brand'
+              ? 'bg-[#FF7900] text-white shadow-sm'
+              : badgeVariant === 'green' || badgeVariant === 'emerald'
+              ? 'bg-[#65A51C] text-white shadow-sm'
               : badgeVariant === 'amber'
               ? 'bg-amber-500 text-slate-950'
-              : 'bg-slate-800 text-white'
+              : 'bg-[#161616] text-white border border-white/10'
           }`}>
             {badge}
           </span>
@@ -36,7 +38,7 @@ export default function SectionHeader({
       }`}>
         {title}{' '}
         {titleHighlight && (
-          <span className="text-emerald-600 block sm:inline">
+          <span className="text-[#FF7900] block sm:inline">
             {titleHighlight}
           </span>
         )}

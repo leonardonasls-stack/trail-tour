@@ -27,16 +27,16 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section className="py-20 sm:py-28 bg-slate-900 text-white relative overflow-hidden">
+    <section className="py-20 sm:py-28 bg-[#161616] text-white relative overflow-hidden">
       {/* Background Accent */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#FF7900]/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Cabeçalho */}
         <SectionHeader
           badge="Passo a Passo Simples"
-          badgeVariant="emerald"
+          badgeVariant="orange"
           title="Como Funciona o Seu"
           titleHighlight="Agendamento"
           description="Sem formulários complicados ou taxas ocultas. Processo 100% humanizado e rápido pelo WhatsApp oficial."
@@ -54,7 +54,7 @@ export default function HowItWorks() {
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <div className="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+                    <div className="w-12 h-12 rounded-xl bg-[#FF7900]/20 text-[#FF7900] flex items-center justify-center">
                       <Icon className="w-6 h-6" />
                     </div>
                     <span className="text-3xl font-black text-slate-300">

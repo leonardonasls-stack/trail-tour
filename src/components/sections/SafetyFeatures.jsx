@@ -38,10 +38,10 @@ export default function SafetyFeatures() {
         {/* Cabeçalho */}
         <SectionHeader
           badge="Segurança em 1º Lugar"
-          badgeVariant="emerald"
+          badgeVariant="orange"
           title="Aventura com Máxima"
           titleHighlight="Proteção & Cuidado"
-          description="Aqui na Trail Tour Milagres, a emoção da trilha vem acompanhada de protocolos rígidos para que você e sua família aproveitem cada segundo sem preocupações."
+          description="Aqui na Quadriciclo Milagres Adventure, a emoção da trilha vem acompanhada de protocolos rígidos para que você e sua família aproveitem cada segundo sem preocupações."
         />
 
         {/* Grid de Diferenciais de Segurança */}
@@ -55,10 +55,10 @@ export default function SafetyFeatures() {
               >
                 <div>
                   <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shadow-sm ${
-                    item.color === 'emerald' ? 'bg-emerald-500/10 text-emerald-800' :
-                    item.color === 'amber' ? 'bg-amber-500/10 text-amber-800' :
-                    item.color === 'blue' ? 'bg-blue-500/10 text-blue-800' :
-                    'bg-orange-500/10 text-orange-800'
+                    item.color === 'emerald' ? 'bg-[#65A51C]/15 text-[#4D8014]' :
+                    item.color === 'amber' ? 'bg-[#FF7900]/15 text-[#E06800]' :
+                    item.color === 'blue' ? 'bg-[#8B4A25]/15 text-[#8B4A25]' :
+                    'bg-[#FF7900]/15 text-[#E06800]'
                   }`}>
                     <Icon className="w-7 h-7" />
                   </div>
@@ -70,9 +70,9 @@ export default function SafetyFeatures() {
                   </p>
                 </div>
                 
-                <div className="pt-4 mt-4 border-t border-slate-200/60 flex items-center gap-1.5 text-xs font-semibold text-emerald-800">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-700" />
-                  <span>Protocolo Padrão Trail Tour</span>
+                <div className="pt-4 mt-4 border-t border-slate-200/60 flex items-center gap-1.5 text-xs font-semibold text-[#65A51C]">
+                  <CheckCircle2 className="w-4 h-4 text-[#65A51C]" />
+                  <span>Padrão Milagres Adventure</span>
                 </div>
               </GlassCard>
             );
@@ -80,11 +80,11 @@ export default function SafetyFeatures() {
         </div>
 
         {/* Faixa em Destaque com Imagem Real de Turistas com Capacete */}
-        <div className="mt-16 rounded-3xl overflow-hidden bg-slate-950 text-white p-8 sm:p-12 relative border border-slate-800 shadow-xl">
+        <div className="mt-16 rounded-3xl overflow-hidden bg-[#161616] text-white p-8 sm:p-12 relative border border-white/10 shadow-xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
             <div className="lg:col-span-7 space-y-4 text-left">
-              <span className="inline-block px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-emerald-900/90 text-white border border-emerald-400/40">
+              <span className="inline-block px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-[#FF7900]/25 text-[#FF7900] border border-[#FF7900]/40">
                 Passeio Apto Para Toda Família
               </span>
               <h3 className="text-2xl sm:text-3xl font-black leading-tight text-white">
@@ -95,11 +95,11 @@ export default function SafetyFeatures() {
               </p>
               <div className="flex flex-wrap gap-4 pt-2">
                 <div className="flex items-center gap-2 text-xs font-bold text-white">
-                  <Award className="w-4 h-4 text-amber-400" />
+                  <Award className="w-4 h-4 text-[#FF7900]" />
                   <span>100% dos guias capacitados</span>
                 </div>
                 <div className="flex items-center gap-2 text-xs font-bold text-white">
-                  <HeartHandshake className="w-4 h-4 text-emerald-400" />
+                  <HeartHandshake className="w-4 h-4 text-[#65A51C]" />
                   <span>Atendimento humanizado</span>
                 </div>
               </div>

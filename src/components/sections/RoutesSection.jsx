@@ -12,7 +12,7 @@ export default function RoutesSection() {
         {/* Cabeçalho da Seção */}
         <SectionHeader
           badge="Roteiros Guiados"
-          badgeVariant="emerald"
+          badgeVariant="orange"
           title="Escolha Sua Próxima"
           titleHighlight="Aventura em Milagres"
           description="Circuitos pensados para proporcionar emoção, cenários inesquecíveis e momentos de pura contemplação. Todos os passeios contam com guia nativo e quadriciclos revisados."

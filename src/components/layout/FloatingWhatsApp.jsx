@@ -14,7 +14,7 @@ export default function FloatingWhatsApp() {
       >
         <span className="absolute -top-1 -right-1 flex h-3.5 w-3.5">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-          <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-amber-400"></span>
+          <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-[#FF7900]"></span>
         </span>
         <MessageCircle className="w-6 h-6 fill-white" />
         <span className="text-sm font-black pr-1 hidden sm:inline-block tracking-wide">

@@ -8,12 +8,18 @@ export default {
     extend: {
       colors: {
         brand: {
-          primary: 'var(--brand-primary, #059669)',
-          'primary-hover': 'var(--brand-primary-hover, #047857)',
-          secondary: 'var(--brand-secondary, #0F172A)',
-          accent: 'var(--brand-accent, #F59E0B)',
-          sand: 'var(--brand-sand, #F8FAFC)',
-          dark: 'var(--brand-dark, #0B1120)',
+          orange: '#FF7900',
+          'orange-hover': '#E06800',
+          brown: '#8B4A25',
+          green: '#65A51C',
+          charcoal: '#161616',
+          cream: '#FFF6EB',
+          primary: 'var(--brand-primary, #FF7900)',
+          'primary-hover': 'var(--brand-primary-hover, #E06800)',
+          secondary: 'var(--brand-secondary, #161616)',
+          accent: 'var(--brand-accent, #65A51C)',
+          sand: 'var(--brand-sand, #FAF8F5)',
+          dark: 'var(--brand-dark, #121212)',
           muted: '#64748B',
         },
         whatsapp: {

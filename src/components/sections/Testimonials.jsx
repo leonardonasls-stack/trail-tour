@@ -12,10 +12,10 @@ export default function Testimonials() {
         {/* Cabeçalho */}
         <SectionHeader
           badge="Depoimentos Reais"
-          badgeVariant="amber"
+          badgeVariant="orange"
           title="O que Dizem Quem Já"
           titleHighlight="Acelerou Conosco"
-          description="A satisfação e segurança de quem viveu a experiência Trail Tour Milagres em primeira mão."
+          description="A satisfação e segurança de quem viveu a experiência Quadriciclo Milagres Adventure em primeira mão."
         />
 
         {/* Grid de Depoimentos */}
@@ -27,9 +27,9 @@ export default function Testimonials() {
             >
               <div>
                 {/* Estrelas */}
-                <div className="flex items-center gap-1 text-amber-400 mb-4">
+                <div className="flex items-center gap-1 text-[#FF7900] mb-4">
                   {[...Array(t.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-amber-400" />
+                    <Star key={i} className="w-5 h-5 fill-[#FF7900]" />
                   ))}
                 </div>
 
@@ -46,7 +46,7 @@ export default function Testimonials() {
                   <h3 className="font-bold text-slate-900 text-sm">{t.name}</h3>
                   <span className="text-xs text-slate-600">{t.location}</span>
                 </div>
-                <span className="text-[11px] font-semibold text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">
+                <span className="text-[11px] font-semibold text-[#4D8014] bg-[#65A51C]/15 px-2.5 py-1 rounded-full border border-[#65A51C]/25">
                   {t.tour}
                 </span>
               </div>

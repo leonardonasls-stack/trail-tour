@@ -15,14 +15,16 @@ export default function Badge({
 
   const variantStyles = {
     default: 'bg-slate-100 text-slate-800 border border-slate-200',
-    emerald: 'bg-emerald-500/10 text-emerald-700 border border-emerald-500/20 font-bold',
+    orange: 'bg-orange-500/10 text-orange-600 border border-orange-500/25 font-bold',
+    brand: 'bg-[#FF7900]/15 text-[#E06800] border border-[#FF7900]/30 font-bold',
+    green: 'bg-[#65A51C]/15 text-[#4D8014] border border-[#65A51C]/30 font-bold',
+    emerald: 'bg-[#65A51C]/15 text-[#4D8014] border border-[#65A51C]/30 font-bold',
     amber: 'bg-amber-500/10 text-amber-700 border border-amber-500/20 font-bold',
-    orange: 'bg-orange-500/10 text-orange-700 border border-orange-500/20 font-bold',
-    dark: 'bg-slate-900/80 text-white border border-slate-700/60 font-semibold',
+    dark: 'bg-[#161616] text-white border border-white/10 font-semibold',
     glass: 'bg-white/20 text-white border border-white/30 backdrop-blur-md shadow-sm',
     // Dificuldades
-    facil: 'bg-emerald-500/15 text-emerald-800 border border-emerald-500/30 font-bold',
-    moderado: 'bg-amber-500/15 text-amber-800 border border-amber-500/30 font-bold',
+    facil: 'bg-[#65A51C]/15 text-[#4D8014] border border-[#65A51C]/30 font-bold',
+    moderado: 'bg-[#FF7900]/15 text-[#E06800] border border-[#FF7900]/30 font-bold',
     dificil: 'bg-rose-500/15 text-rose-800 border border-rose-500/30 font-bold',
   };
 

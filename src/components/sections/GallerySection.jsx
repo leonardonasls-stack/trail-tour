@@ -13,7 +13,7 @@ export default function GallerySection() {
         {/* Cabeçalho */}
         <SectionHeader
           badge="Galeria Real"
-          badgeVariant="emerald"
+          badgeVariant="orange"
           title="Cenários Reais de"
           titleHighlight="São Miguel dos Milagres"
           description="Confira alguns dos momentos vividos por nossos turistas ao longo das praias, trilhas ecológicas e mirantes da Costa dos Corais."

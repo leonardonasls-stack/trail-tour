@@ -20,7 +20,7 @@ export default function FaqSection() {
         {/* Cabeçalho */}
         <SectionHeader
           badge="Tire Suas Dúvidas"
-          badgeVariant="emerald"
+          badgeVariant="orange"
           title="Perguntas Frequentes &"
           titleHighlight="Segurança"
           description="Tudo o que você precisa saber sobre CNH, equipamentos, idade mínima e condições de chuva para fazer o seu passeio com tranquilidade."
@@ -46,7 +46,7 @@ export default function FaqSection() {
                     {faq.question}
                   </span>
                   <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${
-                    isOpen ? 'bg-emerald-600 text-white rotate-180' : 'bg-slate-100 text-slate-600'
+                    isOpen ? 'bg-[#FF7900] text-white rotate-180' : 'bg-slate-100 text-slate-600'
                   }`}>
                     <ChevronDown className="w-4 h-4" />
                   </div>
@@ -64,7 +64,7 @@ export default function FaqSection() {
 
         {/* Bloco de Ajuda Rápida no WhatsApp */}
         <div className="mt-12 text-center p-8 rounded-2xl bg-white border border-slate-200 shadow-sm">
-          <HelpCircle className="w-10 h-10 text-emerald-700 mx-auto mb-3" />
+          <HelpCircle className="w-10 h-10 text-[#FF7900] mx-auto mb-3" />
           <h3 className="text-xl font-black text-slate-900">Ainda tem alguma dúvida específica?</h3>
           <p className="text-sm text-slate-700 mt-1 max-w-md mx-auto">
             Nossa equipe de guias e atendimento está disponível para esclarecer qualquer detalhe pelo WhatsApp.

@@ -58,11 +58,11 @@ export default function FleetSection() {
                 <div className="grid grid-cols-2 gap-3 my-6 pt-4 border-t border-white/10">
                   <div className="p-3 rounded-xl bg-white/5 border border-white/5">
                     <span className="text-[11px] text-slate-400 uppercase font-bold block">Motorização</span>
-                    <strong className="text-sm text-amber-400 font-bold">{vehicle.engine}</strong>
+                    <strong className="text-sm text-[#FF7900] font-bold">{vehicle.engine}</strong>
                   </div>
                   <div className="p-3 rounded-xl bg-white/5 border border-white/5">
                     <span className="text-[11px] text-slate-400 uppercase font-bold block">Capacidade</span>
-                    <strong className="text-sm text-emerald-400 font-bold">{vehicle.capacity}</strong>
+                    <strong className="text-sm text-[#65A51C] font-bold">{vehicle.capacity}</strong>
                   </div>
                   <div className="p-3 rounded-xl bg-white/5 border border-white/5">
                     <span className="text-[11px] text-slate-400 uppercase font-bold block">Câmbio</span>
@@ -78,7 +78,7 @@ export default function FleetSection() {
                 <ul className="space-y-2 mb-6">
                   {vehicle.features.map((feat, idx) => (
                     <li key={idx} className="flex items-center gap-2 text-xs sm:text-sm text-slate-300">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                      <CheckCircle2 className="w-4 h-4 text-[#65A51C] shrink-0" />
                       <span>{feat}</span>
                     </li>
                   ))}
@@ -90,7 +90,7 @@ export default function FleetSection() {
                 <Button
                   href={getWhatsAppUrl(`Quadriciclo ${vehicle.bookingParam}`)}
                   target="_blank"
-                  variant="accent"
+                  variant="primary"
                   size="md"
                   icon={MessageCircle}
                   iconPosition="left"
@@ -106,7 +106,7 @@ export default function FleetSection() {
         {/* Faixa Inferior de Garantia Mecânica */}
         <div className="mt-12 p-6 rounded-2xl bg-white/5 border border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+            <div className="w-10 h-10 rounded-xl bg-[#65A51C]/20 text-[#65A51C] flex items-center justify-center shrink-0">
               <Shield className="w-5 h-5" />
             </div>
             <div>

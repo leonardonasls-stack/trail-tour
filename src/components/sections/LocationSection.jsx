@@ -16,7 +16,7 @@ export default function LocationSection() {
         {/* Cabeçalho */}
         <SectionHeader
           badge="Onde Estamos"
-          badgeVariant="emerald"
+          badgeVariant="orange"
           title="Nossa Base & Ponto de"
           titleHighlight="Partida"
           description="Localização de fácil acesso no coração de São Miguel dos Milagres, com ponto de apoio completo e estacionamento."
@@ -29,7 +29,7 @@ export default function LocationSection() {
             <GlassCard className="bg-white p-6 sm:p-8 border border-slate-200/80 shadow-md space-y-6">
               
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-700 flex items-center justify-center shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-[#FF7900]/15 text-[#FF7900] flex items-center justify-center shrink-0">
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div>
@@ -41,7 +41,7 @@ export default function LocationSection() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-700 flex items-center justify-center shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-[#FF7900]/15 text-[#FF7900] flex items-center justify-center shrink-0">
                   <Clock className="w-6 h-6" />
                 </div>
                 <div>
@@ -49,7 +49,7 @@ export default function LocationSection() {
                   <p className="text-sm text-slate-700 mt-1">
                     {companyData.hours}
                   </p>
-                  <span className="text-xs text-emerald-800 font-bold block mt-0.5">
+                  <span className="text-xs text-[#65A51C] font-bold block mt-0.5">
                     Saídas com agendamento prévio
                   </span>
                 </div>
@@ -107,7 +107,7 @@ export default function LocationSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
                 
                 <div className="absolute bottom-6 left-6 right-6 text-white text-left">
-                  <span className="px-3 py-1 rounded-full text-xs font-black uppercase bg-emerald-800 text-white inline-block mb-2 shadow-md">
+                  <span className="px-3 py-1 rounded-full text-xs font-black uppercase bg-[#FF7900] text-white inline-block mb-2 shadow-md">
                     Ponto Estratégico
                   </span>
                   <h3 className="text-xl sm:text-2xl font-black">

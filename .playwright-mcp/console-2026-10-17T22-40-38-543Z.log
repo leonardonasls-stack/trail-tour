@@ -1,9 +1,0 @@
-[     238ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:3001/node_modules/.vite/deps/chunk-SVG7M4VJ.js?v=fd8542d4:21606
-[     362ms] [ERROR] Warning: Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.%s 
-
-Check the render method of `GallerySection`.  
-    at div
-    at GallerySection
-    at main
-    at div
-    at App @ http://localhost:3001/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=fd8542d4:61

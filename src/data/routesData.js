@@ -33,37 +33,6 @@ export const routesData = [
     ]
   },
   {
-    id: "trilha-coqueirais-mirante",
-    title: "Trilha dos Coqueirais & Mirante do Cruzeiro",
-    duration: "Aprox. 2h30",
-    difficulty: "Moderado",
-    difficultyLevel: "moderado",
-    terrain: "Trilha rústica & Coqueirais",
-    image: "/images/mirante_vista_04.jpeg",
-    highlight: "Vista Panorâmica 360°",
-    badgeColor: "amber",
-    description: "Aventure-se por túneis verdes formados por milhares de coqueiros e suba até o mirante com a vista mais espetacular de toda a Costa dos Corais.",
-    stops: [
-      { name: "Base Operacional", detail: "Ajuste de equipamentos e segurança" },
-      { name: "Túneis de Coqueiros", detail: "Pilote sob a sombra da fazenda de coqueirais" },
-      { name: "Trecho de Aventura", detail: "Curvas dinâmicas e relevo rústico" },
-      { name: "Alto do Cruzeiro", detail: "Parada no mirante com vista do mar de Milagres" }
-    ],
-    highlights: [
-      "Túneis centenários de coqueirais",
-      "Trilha de aventura com relevo e adrenalina",
-      "Subida ao Mirante do Alto do Cruzeiro",
-      "Visão panorâmica 360° do mar azul-turquesa"
-    ],
-    includes: [
-      "Capacete higienizado",
-      "Combustível e seguro do veículo",
-      "Guia nativo credenciado",
-      "Tempo estendido para fotos no mirante",
-      "Dicas históricas sobre a região"
-    ]
-  },
-  {
     id: "sunset-vip",
     title: "Sunset VIP — Passeio do Pôr do Sol",
     duration: "Aprox. 2 horas",

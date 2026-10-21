@@ -33,7 +33,7 @@ export const routesData = [
   },
   {
     id: "sunset-vip",
-    title: "Sunset VIP — Passeio do Pôr do Sol",
+    title: "Sunset VIP — Passeio Praia Carro Quebrado",
     duration: "Aprox. 2 horas",
     difficulty: "Fácil",
     difficultyLevel: "facil",
@@ -41,12 +41,14 @@ export const routesData = [
     image: "/images/sunset_por_do_sol_09.jpeg",
     highlight: "Experiência Exclusiva",
     badgeColor: "orange",
-    description: "Saída no final da tarde aproveitando a brisa fresca e a luz dourada mágica de Milagres, finalizando com o pôr do sol mais bonito da região.",
+    description: "Saída no final da manhã aproveitando a brisa fresca e a luz do sol de Milagres, finalizando com o pôr do sol mais bonito da região.",
     stops: [
-      { name: "Saída 16h30", detail: "Aproveitando a temperatura agradável" },
-      { name: "Trilha Dourada", detail: "Luz perfeita para fotos e vídeos" },
-      { name: "Mirante do Pôr do Sol", detail: "Contemplação do pôr do sol alagoano" },
-      { name: "Retorno Crepúsculo", detail: "Volta com faróis acesos em comboio seguro" }
+      { name: "Saída 11h30" },
+      { name: "Trilha Dourada" },
+      { name: "Praia de Morros de Camaragibe" },
+      { name: "Mirante de Carro Quebrado" },
+      { name: "Rio Camaragibe" },
+      { name: "Beach Club Lontra" }
     ],
     highlights: [
       "Horário nobre com clima mais ameno",
@@ -55,8 +57,8 @@ export const routesData = [
       "Ideal para casais, famílias e celebrações"
     ],
     includes: [
-      "Combustível e seguro do veículo",
       "Guia nativo credenciado",
+      "Instrução e test-drive inicial",
       "Auxílio para fotos incríveis com seu celular",
       "Retorno com segurança em comboio"
     ]

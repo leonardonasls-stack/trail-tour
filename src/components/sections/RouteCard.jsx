@@ -68,8 +68,8 @@ export default function RouteCard({ route }) {
                 <li key={idx} className="flex items-start gap-2 text-xs text-slate-800">
                   <MapPin className="w-3.5 h-3.5 text-[#FF7900] shrink-0 mt-0.5" />
                   <div>
-                    <strong className="text-slate-900">{stop.name}:</strong>{' '}
-                    <span className="text-slate-600">{stop.detail}</span>
+                    <strong className="text-slate-900">{stop.name}{stop.detail ? ':' : ''}</strong>{' '}
+                    {stop.detail && <span className="text-slate-600">{stop.detail}</span>}
                   </div>
                 </li>
               ))}

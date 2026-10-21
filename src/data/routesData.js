@@ -1,20 +1,22 @@
 export const routesData = [
   {
     id: "circuito-praias",
-    title: "Circuito Praias & Piscinas Naturais",
+    title: "Circuito Praias & Mirante do Cruzeiro",
     duration: "Aprox. 2 horas",
     difficulty: "Fácil",
     difficultyLevel: "facil",
-    terrain: "Areia firme & Beira-mar",
+    terrain: "Areia firme & Trilha Rústica",
     image: "/images/trilha_praia_01.jpeg",
     highlight: "Mais Procurado",
     badgeColor: "emerald",
     description: "Percurso pelas praias mais paradisíacas de São Miguel dos Milagres, com trechos planos na areia da praia e paradas relaxantes para banho e contemplação.",
     stops: [
-      { name: "Ponto de Partida", detail: "Briefing e instruções iniciais" },
-      { name: "Praia do Toque", detail: "Vista dos recifes de corais" },
-      { name: "Praia de Lages", detail: "Parada refrescante para banho de mar" },
-      { name: "Retorno Panorâmico", detail: "Fotos guiadas na orla marítima" }
+      { name: "Briefing e instruções iniciais" },
+      { name: "Praia de Milagres" },
+      { name: "Fonte Milagrosa" },
+      { name: "Mirante do Cruzeiro" },
+      { name: "Praia do Riacho" },
+      { name: "Fotos guiadas na orla marítima" }
     ],
     highlights: [
       "Praia do Toque e Praia de Lages",
@@ -24,7 +26,7 @@ export const routesData = [
     ],
     includes: [
       "Capacete higienizado",
-      "Combustível e seguro do veículo",
+      "Dicas Históricas sobre a região",
       "Guia nativo credenciado",
       "Instrução e test-drive inicial",
       "Paradas para fotos guiadas"

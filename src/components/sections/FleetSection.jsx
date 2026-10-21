@@ -41,12 +41,6 @@ export default function FleetSection() {
                     alt={vehicle.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-black tracking-wider uppercase bg-amber-500 text-slate-950 shadow-md">
-                    {vehicle.tag}
-                  </div>
-                  <div className="absolute bottom-3 left-3 px-3 py-1 rounded-full text-xs font-semibold bg-slate-900/80 text-white backdrop-blur-md border border-white/10">
-                    {vehicle.category}
-                  </div>
                 </div>
 
                 {/* Título e Categoria */}

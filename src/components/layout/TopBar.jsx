@@ -3,9 +3,16 @@ import { Menu, X, Compass, MessageCircle } from 'lucide-react';
 import { companyData } from '../../data/company';
 import { getWhatsAppUrl } from '../../utils/whatsappLink';
 
+const PILL_ACTIVE =
+  'text-[#FF7900] bg-gradient-to-b from-white to-orange-50 border-[#FF7900]/40 shadow-[0_1px_2px_rgba(255,121,0,0.12),0_4px_10px_-2px_rgba(255,121,0,0.25),inset_0_1px_0_rgba(255,255,255,0.9)]';
+const PILL_INACTIVE =
+  'text-slate-700 bg-transparent border-transparent hover:text-[#FF7900] hover:bg-white/60';
+
 export default function TopBar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const [activeId, setActiveId] = useState('inicio');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,9 +21,25 @@ export default function TopBar() {
       } else {
         setIsScrolled(false);
       }
+
+      // Scroll-spy: última seção cujo topo já passou da altura do header
+      const offset = 140;
+      let current = navLinks[0].href.slice(1);
+      for (const link of navLinks) {
+        const el = document.getElementById(link.href.slice(1));
+        if (el && el.getBoundingClientRect().top <= offset) {
+          current = link.href.slice(1);
+        }
+      }
+      // Fim da página: força o último item
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+        current = navLinks[navLinks.length - 1].href.slice(1);
+      }
+      setActiveId(current);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -53,12 +76,15 @@ export default function TopBar() {
           </a>
 
           {/* Links Desktop */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-2">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="text-sm font-semibold text-slate-700 hover:text-[#FF7900] transition-colors"
+                aria-current={activeId === link.href.slice(1) ? 'page' : undefined}
+                className={`px-4 py-2 rounded-full text-sm font-semibold border transition-all duration-200 ${
+                  activeId === link.href.slice(1) ? PILL_ACTIVE : PILL_INACTIVE
+                }`}
               >
                 {link.label}
               </a>
@@ -101,7 +127,10 @@ export default function TopBar() {
                 key={link.label}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="px-3 py-2 rounded-lg text-base font-semibold text-slate-800 hover:bg-orange-50 hover:text-[#FF7900] transition-colors"
+                aria-current={activeId === link.href.slice(1) ? 'page' : undefined}
+                className={`px-4 py-2.5 rounded-full text-base font-semibold border transition-all duration-200 ${
+                  activeId === link.href.slice(1) ? PILL_ACTIVE : PILL_INACTIVE
+                }`}
               >
                 {link.label}
               </a>

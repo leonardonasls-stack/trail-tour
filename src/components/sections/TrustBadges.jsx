@@ -1,12 +1,12 @@
 import React from 'react';
-import { ShieldCheck, Compass, Users, Sparkles } from 'lucide-react';
+import { ShieldCheck, Compass, Users, MessageCircle } from 'lucide-react';
 
 export default function TrustBadges() {
   const badges = [
     {
       icon: ShieldCheck,
       title: "Segurança Certificada",
-      desc: "Capacetes higienizados e seguro incluso",
+      desc: "Capacetes higienizados e prontos para uso",
       color: "text-[#65A51C]",
       bg: "bg-[#65A51C]/15",
     },
@@ -25,9 +25,9 @@ export default function TrustBadges() {
       bg: "bg-[#8B4A25]/15",
     },
     {
-      icon: Sparkles,
-      title: "Fotos & Vídeos Inclusos",
-      desc: "Nossos guias registram seus melhores momentos",
+      icon: MessageCircle,
+      title: "Atendimento Humano",
+      desc: "Você conversa direto com a nossa equipe",
       color: "text-[#FF7900]",
       bg: "bg-[#FF7900]/15",
     },

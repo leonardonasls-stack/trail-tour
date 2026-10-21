@@ -41,7 +41,7 @@ export const routesData = [
     image: "/images/sunset_por_do_sol_09.jpeg",
     highlight: "Experiência Exclusiva",
     badgeColor: "orange",
-    description: "Saída no final da manhã aproveitando a brisa fresca e a luz do sol de Milagres, finalizando com o pôr do sol mais bonito da região.",
+    description: "Saída no final da manhã aproveitando a brisa fresca, Coqueirais e a luz do sol de Milagres, finalizando com o pôr do sol mais bonito da região.",
     stops: [
       { name: "Saída 11h30" },
       { name: "Trilha Dourada" },

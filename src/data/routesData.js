@@ -25,7 +25,6 @@ export const routesData = [
       "Fotos nos cenários mais famosos de Alagoas"
     ],
     includes: [
-      "Capacete higienizado",
       "Dicas Históricas sobre a região",
       "Guia nativo credenciado",
       "Instrução e test-drive inicial",
@@ -56,7 +55,6 @@ export const routesData = [
       "Ideal para casais, famílias e celebrações"
     ],
     includes: [
-      "Capacete higienizado",
       "Combustível e seguro do veículo",
       "Guia nativo credenciado",
       "Auxílio para fotos incríveis com seu celular",

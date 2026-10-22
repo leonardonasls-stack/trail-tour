@@ -46,3 +46,34 @@
     box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3);
   }
 }
+
+/* Carrossel infinito da galeria (a lista é duplicada, então -50% fecha o loop) */
+@keyframes gallery-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.gallery-marquee {
+  overflow: hidden;
+  padding: 1rem 0;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+}
+
+.gallery-track {
+  display: flex;
+  width: max-content;
+  animation: gallery-scroll 55s linear infinite;
+  will-change: transform;
+}
+
+/* Pausa quando o mouse está sobre o carrossel (inclui a foto) ou há foco por teclado */
+.gallery-marquee:hover .gallery-track,
+.gallery-marquee:has(:focus-visible) .gallery-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-track { animation: none; }
+  .gallery-marquee { overflow-x: auto; }
+}

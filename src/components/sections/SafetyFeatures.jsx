@@ -1,16 +1,10 @@
 import React from 'react';
-import { ShieldCheck, HardHat, Compass, Sparkles, CheckCircle2, Award, HeartHandshake } from 'lucide-react';
+import { ShieldCheck, Compass, Sparkles, CheckCircle2, Award, HeartHandshake } from 'lucide-react';
 import SectionHeader from '../common/SectionHeader';
 import GlassCard from '../common/GlassCard';
 
 export default function SafetyFeatures() {
   const safetyPoints = [
-    {
-      icon: HardHat,
-      title: "Equipamentos de Proteção Certificados",
-      description: "Capacetes higienizados e inspecionados individualmente antes de cada passeio, disponíveis para condutores e acompanhantes.",
-      color: "emerald"
-    },
     {
       icon: Compass,
       title: "Guias Nativos & Especializados",
@@ -45,7 +39,7 @@ export default function SafetyFeatures() {
         />
 
         {/* Grid de Diferenciais de Segurança */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {safetyPoints.map((item, index) => {
             const Icon = item.icon;
             return (

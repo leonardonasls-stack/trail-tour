@@ -4,6 +4,22 @@ Todas as alterações notáveis, adições de código, melhorias visuais e atual
 
 O formato segue as convenções baseadas em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
+## [1.6.0] - 2026-10-21
+### Commit: `c6c3192` — *Remoção de pasta dispensável e correção de visual e layout*
+
+#### Removido
+- **Pasta Legada de Identidade Visual (`Quadriciclo_Milagres_Adventure/`)**:
+  - Removidos 58 arquivos redundantes/pesados que não eram mais referenciados pelo app (logos, manuais, bordados, mockups e assets gráficos pesados), mantendo o repositório leve e otimizado.
+
+#### Modificado
+- **Refinamento Visual, Contraste & Consistência de Escala de Cores (`zinc`)**:
+  - **`HeroSection.jsx`**: Substituído `text-slate-300` por `text-zinc-200`/`text-zinc-300` para melhor legibilidade no subtítulo e legenda sobre o background escuro.
+  - **`FleetSection.jsx`**: Unificada a paleta técnica para `text-zinc-300`, `text-zinc-200` e `text-zinc-100` nos cards de especificações e features dos veículos.
+  - **`RouteCard.jsx`**: Elevado o contraste do badge de duração com `text-zinc-100`.
+  - **`HowItWorks.jsx`**: Melhorada a leitura das etapas com `text-zinc-100`.
+  - **`GallerySection.jsx` & `LocationSection.jsx`**: Ajustadas legendas e descrições para `text-zinc-200`.
+  - **`Footer.jsx`**: Alinhadas as classes de texto de rodapé para `text-zinc-400`.
+
 ---
 
 ## [1.5.0] - 2026-10-11

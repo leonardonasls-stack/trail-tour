@@ -185,7 +185,7 @@ export default function GallerySection() {
                 {activeItem.category}
               </span>
               <span className="text-base font-semibold">{activeItem.title}</span>
-              <span className="block text-xs text-slate-300 mt-1">
+              <span className="block text-xs text-zinc-200 mt-1">
                 Clique na foto para {zoomed ? 'reduzir' : 'ampliar'} · {activeIndex + 1} / {total}
               </span>
             </figcaption>

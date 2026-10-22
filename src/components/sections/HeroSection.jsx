@@ -38,7 +38,7 @@ export default function HeroSection() {
             </h1>
 
             {/* Subtítulo Claro e Evocativo */}
-            <p className="text-slate-300 text-base sm:text-lg lg:text-xl leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
+            <p className="text-zinc-200 text-base sm:text-lg lg:text-xl leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
               Explore túneis de coqueirais, praias paradisíacas e mirantes de tirar o fôlego a bordo de quadriciclos potentes e automáticos. Guias nativos, instrução prática e segurança total.
             </p>
 
@@ -104,7 +104,7 @@ export default function HeroSection() {
 
                 {/* Legenda na imagem */}
                 <div className="absolute bottom-4 left-4 right-4 text-left">
-                  <span className="text-xs uppercase tracking-widest text-slate-300 font-semibold block">Costa dos Corais / AL</span>
+                  <span className="text-xs uppercase tracking-widest text-zinc-300 font-semibold block">Costa dos Corais / AL</span>
                   <p className="text-lg font-bold text-white leading-tight">Passeios diários das 8h às 18h</p>
                 </div>
               </div>

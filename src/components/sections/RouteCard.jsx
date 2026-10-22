@@ -31,7 +31,7 @@ export default function RouteCard({ route }) {
           <Badge variant={route.difficultyLevel} size="sm">
             {route.difficulty}
           </Badge>
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-slate-900/70 text-slate-200 backdrop-blur-md border border-white/10">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-slate-900/70 text-zinc-100 backdrop-blur-md border border-white/10">
             <Clock className="w-3.5 h-3.5 text-amber-400" />
             <span>{route.duration}</span>
           </div>

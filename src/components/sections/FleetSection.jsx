@@ -51,27 +51,27 @@ export default function FleetSection() {
                 {/* Especificações Técnicas em Grid */}
                 <div className="grid grid-cols-2 gap-3 my-6 pt-4 border-t border-white/10">
                   <div className="p-3 rounded-xl bg-white/5 border border-white/5">
-                    <span className="text-[11px] text-slate-400 uppercase font-bold block">Motorização</span>
+                    <span className="text-[11px] text-zinc-300 uppercase font-bold block">Motorização</span>
                     <strong className="text-sm text-[#FF7900] font-bold">{vehicle.engine}</strong>
                   </div>
                   <div className="p-3 rounded-xl bg-white/5 border border-white/5">
-                    <span className="text-[11px] text-slate-400 uppercase font-bold block">Capacidade</span>
+                    <span className="text-[11px] text-zinc-300 uppercase font-bold block">Capacidade</span>
                     <strong className="text-sm text-[#65A51C] font-bold">{vehicle.capacity}</strong>
                   </div>
                   <div className="p-3 rounded-xl bg-white/5 border border-white/5">
-                    <span className="text-[11px] text-slate-400 uppercase font-bold block">Câmbio</span>
-                    <strong className="text-sm text-slate-200 font-semibold">{vehicle.transmission}</strong>
+                    <span className="text-[11px] text-zinc-300 uppercase font-bold block">Câmbio</span>
+                    <strong className="text-sm text-zinc-100 font-semibold">{vehicle.transmission}</strong>
                   </div>
                   <div className="p-3 rounded-xl bg-white/5 border border-white/5">
-                    <span className="text-[11px] text-slate-400 uppercase font-bold block">Tração</span>
-                    <strong className="text-sm text-slate-200 font-semibold">{vehicle.traction}</strong>
+                    <span className="text-[11px] text-zinc-300 uppercase font-bold block">Tração</span>
+                    <strong className="text-sm text-zinc-100 font-semibold">{vehicle.traction}</strong>
                   </div>
                 </div>
 
                 {/* Lista de Atributos */}
                 <ul className="space-y-2 mb-6">
                   {vehicle.features.map((feat, idx) => (
-                    <li key={idx} className="flex items-center gap-2 text-xs sm:text-sm text-slate-300">
+                    <li key={idx} className="flex items-center gap-2 text-xs sm:text-sm text-zinc-200">
                       <CheckCircle2 className="w-4 h-4 text-[#65A51C] shrink-0" />
                       <span>{feat}</span>
                     </li>

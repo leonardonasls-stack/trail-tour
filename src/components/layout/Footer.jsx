@@ -20,7 +20,7 @@ export default function Footer() {
                 className="h-12 w-auto object-contain"
               />
             </a>
-            <p className="text-xs sm:text-sm text-slate-400 leading-relaxed pt-1">
+            <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed pt-1">
               Passeios guiados de quadriciclo pelas praias, túneis de coqueirais e mirantes paradisíacos na Costa dos Corais, Alagoas.
             </p>
           </div>
@@ -115,9 +115,9 @@ export default function Footer() {
         </div>
 
         {/* Linha Inferior de Direitos Autorais */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-400 gap-4">
           <p>© {currentYear} {companyData.name}. Todos os direitos reservados.</p>
-          <p className="flex items-center gap-1.5 text-slate-400">
+          <p className="flex items-center gap-1.5 text-zinc-400">
             Segurança em 1º Lugar <Shield className="w-3.5 h-3.5 text-[#65A51C]" /> São Miguel dos Milagres - AL
           </p>
         </div>

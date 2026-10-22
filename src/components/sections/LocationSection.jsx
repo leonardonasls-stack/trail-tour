@@ -113,7 +113,7 @@ export default function LocationSection() {
                   <h3 className="text-xl sm:text-2xl font-black">
                     Ponto de Partida com Estrutura Completa
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-300 mt-1 max-w-lg">
+                  <p className="text-xs sm:text-sm text-zinc-200 mt-1 max-w-lg">
                     Área para instruções práticas, estacionamento e suporte para que você inicie sua trilha com total conforto.
                   </p>
                 </div>

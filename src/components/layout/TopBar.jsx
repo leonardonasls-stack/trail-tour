@@ -69,7 +69,7 @@ export default function TopBar() {
             aria-label="Quadriciclo Milagres Adventure - Início"
           >
             <img
-              src="/images/logo_principal_horizontal.png"
+              src="/images/01_Principal_Colorida_Transparente.png"
               alt="Quadriciclo Milagres Adventure"
               className="h-11 sm:h-14 w-auto object-contain transition-transform group-hover:scale-105 filter drop-shadow-sm"
             />

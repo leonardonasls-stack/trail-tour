@@ -15,7 +15,7 @@ export default function Footer() {
           <div className="space-y-4">
             <a href="#inicio" className="block focus:outline-none">
               <img
-                src="/images/logo_principal_horizontal.png"
+                src="/images/01_Principal_Colorida_Transparente.png"
                 alt="Quadriciclo Milagres Adventure"
                 className="h-12 w-auto object-contain"
               />

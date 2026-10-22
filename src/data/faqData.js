@@ -1,13 +1,8 @@
 export const faqData = [
   {
-    id: "cnh",
-    question: "Precisa de carteira de habilitação (CNH) para pilotar?",
-    answer: "Para quem vai conduzir o quadriciclo, é exigido possuir CNH válida (categoria B ou superior) e ter idade mínima de 18 anos. No entanto, quem vai como acompanhante (garupa) não precisa ter habilitação."
-  },
-  {
     id: "criancas",
     question: "Crianças podem participar do passeio na garupa?",
-    answer: "Sim! Crianças a partir de 7 anos podem participar na garupa acompanhadas pelo pai, mãe ou responsável legal. Fornecemos capacetes de tamanho adequado e o guia mantém um ritmo seguro e confortável durante todo o trajeto."
+    answer: "Sim! Crianças podem participar na garupa acompanhadas pelo pai, mãe ou responsável legal. Fornecemos capacetes de tamanho adequado e o guia mantém um ritmo seguro e confortável durante todo o trajeto."
   },
   {
     id: "iniciantes",

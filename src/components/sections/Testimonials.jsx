@@ -25,8 +25,11 @@ export default function Testimonials() {
   }, [activeModalItem]);
 
   return (
-    <section className="py-20 sm:py-28 bg-slate-50 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 sm:py-28 bg-[#161616] text-white relative overflow-hidden">
+      {/* Background Accent (mesmo padrão de Como Funciona) */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#FF7900]/10 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Cabeçalho */}
         <SectionHeader
@@ -35,6 +38,7 @@ export default function Testimonials() {
           title="O que Dizem Quem Já"
           titleHighlight="Acelerou Conosco"
           description="Avaliações reais deixadas diretamente no Google por quem viveu a experiência Quadriciclo Milagres Adventure."
+          light={true}
         />
 
         {/* Grid de Depoimentos estilo Google Card */}
@@ -45,7 +49,7 @@ export default function Testimonials() {
             return (
               <div
                 key={t.id}
-                className="bg-white rounded-[26px] p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.06)] border border-slate-100/80 flex flex-col justify-between transition-all duration-300 hover:shadow-[0_8px_30px_-6px_rgba(0,0,0,0.1)]"
+                className="rounded-2xl bg-white/5 border border-white/10 p-6 flex flex-col justify-between transition-colors duration-300 hover:bg-white/10"
               >
                 <div>
                   {/* Cabeçalho do Card: Avatar circular, Nome, Meta e Tempo */}
@@ -57,15 +61,15 @@ export default function Testimonials() {
                         {t.initial}
                       </div>
                       <div className="min-w-0">
-                        <h3 className="font-bold text-slate-900 text-sm truncate leading-tight">
+                        <h3 className="font-bold text-white text-sm truncate leading-tight">
                           {t.name}
                         </h3>
-                        <p className="text-[11px] text-slate-500 truncate mt-0.5">
+                        <p className="text-[11px] text-zinc-400 truncate mt-0.5">
                           {t.meta}
                         </p>
                       </div>
                     </div>
-                    <span className="text-[11px] text-slate-600 shrink-0 whitespace-nowrap pt-0.5">
+                    <span className="text-[11px] text-zinc-400 shrink-0 whitespace-nowrap pt-0.5">
                       {t.timeAgo}
                     </span>
                   </div>
@@ -78,14 +82,14 @@ export default function Testimonials() {
                   </div>
 
                   {/* Texto do comentário com aspas resumido */}
-                  <p className="text-slate-700 text-[13px] sm:text-sm leading-relaxed">
+                  <p className="text-zinc-100 text-[13px] sm:text-sm leading-relaxed">
                     "{isLong ? `${t.comment.slice(0, 155)}...` : t.comment}"
                   </p>
                 </div>
 
                 {/* Rodapé: Selo Google + Botão Continuar lendo */}
-                <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between text-xs">
-                  <div className="flex items-center gap-1.5 text-emerald-600 font-semibold">
+                <div className="pt-4 mt-4 border-t border-white/10 flex items-center justify-between text-xs">
+                  <div className="flex items-center gap-1.5 text-emerald-400 font-semibold">
                     <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                       <circle cx="12" cy="12" r="10" />
                       <polyline points="9 11 12 14 22 4" />
@@ -97,7 +101,7 @@ export default function Testimonials() {
                     <button
                       type="button"
                       onClick={() => setActiveModalItem(t)}
-                      className="inline-flex items-center gap-1 font-semibold text-slate-700 hover:text-[#FF7900] transition-colors focus:outline-none cursor-pointer"
+                      className="inline-flex items-center gap-1 font-semibold text-amber-400 hover:text-[#FF7900] transition-colors focus:outline-none cursor-pointer"
                     >
                       <span>Continuar lendo</span>
                       <ArrowRight className="w-3.5 h-3.5" />
@@ -106,7 +110,7 @@ export default function Testimonials() {
                     <button
                       type="button"
                       onClick={() => setActiveModalItem(t)}
-                      className="inline-flex items-center gap-1 font-medium text-slate-400 hover:text-slate-600 transition-colors focus:outline-none cursor-pointer"
+                      className="inline-flex items-center gap-1 font-medium text-zinc-300 hover:text-white transition-colors focus:outline-none cursor-pointer"
                     >
                       <span>Ver relato</span>
                       <ArrowRight className="w-3.5 h-3.5" />

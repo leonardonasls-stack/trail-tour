@@ -3,11 +3,6 @@ import { Menu, X, MessageCircle } from 'lucide-react';
 import { companyData } from '../../data/company';
 import { getWhatsAppUrl } from '../../utils/whatsappLink';
 
-const PILL_ACTIVE =
-  'text-[#FF7900] bg-gradient-to-b from-white to-orange-50 border-[#FF7900]/40 shadow-[0_1px_2px_rgba(255,121,0,0.12),0_4px_10px_-2px_rgba(255,121,0,0.25),inset_0_1px_0_rgba(255,255,255,0.9)]';
-const PILL_INACTIVE =
-  'text-slate-700 bg-transparent border-transparent hover:text-[#FF7900] hover:bg-white/60';
-
 function InstagramBadgeIcon({ className = "w-7 h-7" }) {
   return (
     <svg viewBox="0 0 48 48" fill="none" className={className} aria-hidden="true">
@@ -40,12 +35,43 @@ function InstagramBadgeIcon({ className = "w-7 h-7" }) {
   );
 }
 
+const navLinks = [
+  { label: 'Início', href: '#inicio' },
+  { label: 'Roteiros', href: '#roteiros' },
+  { label: 'Frota', href: '#frota' },
+  { label: 'Galeria', href: '#galeria' },
+  { label: 'Dúvidas', href: '#duvidas' },
+  { label: 'Localização', href: '#contato' },
+];
+
 export default function TopBar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeId, setActiveId] = useState('inicio');
+  const [isAtTop, setIsAtTop] = useState(true);
+  const [isDarkTheme, setIsDarkTheme] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
+      const scrollY = window.scrollY;
+      setIsAtTop(scrollY <= 20);
+
+      // 1. Detecta a cor da seção que está passando exatamente atrás da TopBar (y ≈ 40px)
+      const sections = document.querySelectorAll('main > section');
+      const probeY = 45;
+
+      for (const sec of sections) {
+        const rect = sec.getBoundingClientRect();
+        // Ignora a faixa flutuante de TrustBadges (-mt-8) e foca nas seções de bloco
+        if (sec.className.includes('-mt-8')) continue;
+
+        if (rect.top <= probeY && rect.bottom > probeY) {
+          const isWhiteSection = sec.classList.contains('bg-white');
+          setIsDarkTheme(!isWhiteSection);
+          break;
+        }
+      }
+
+      // 2. Scroll-spy para destacar o link do menu correspondente
       const offset = 140;
       let current = navLinks[0].href.slice(1);
       for (const link of navLinks) {
@@ -54,7 +80,7 @@ export default function TopBar() {
           current = link.href.slice(1);
         }
       }
-      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+      if (window.innerHeight + scrollY >= document.documentElement.scrollHeight - 4) {
         current = navLinks[navLinks.length - 1].href.slice(1);
       }
       setActiveId(current);
@@ -65,17 +91,25 @@ export default function TopBar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = [
-    { label: 'Início', href: '#inicio' },
-    { label: 'Roteiros', href: '#roteiros' },
-    { label: 'Frota', href: '#frota' },
-    { label: 'Galeria', href: '#galeria' },
-    { label: 'Dúvidas', href: '#duvidas' },
-    { label: 'Localização', href: '#contato' },
-  ];
+  // Estilos dinâmicos conforme a seção atual (Escura vs. Branca)
+  const headerBgClass = isAtTop
+    ? 'bg-transparent py-4'
+    : isDarkTheme
+    ? 'bg-[#161616]/85 backdrop-blur-md shadow-lg shadow-black/20 py-3'
+    : 'bg-white/85 backdrop-blur-md shadow-sm py-3';
+
+  const pillActiveClass = isDarkTheme
+    ? 'text-[#FF7900] bg-[#FF7900]/15 border-[#FF7900]/40 shadow-sm'
+    : 'text-[#FF7900] bg-gradient-to-b from-white to-orange-50 border-[#FF7900]/40 shadow-[0_1px_2px_rgba(255,121,0,0.12),0_4px_10px_-2px_rgba(255,121,0,0.25)]';
+
+  const pillInactiveClass = isDarkTheme
+    ? 'text-zinc-100 bg-transparent border-transparent hover:text-[#FF7900] hover:bg-white/10'
+    : 'text-slate-700 bg-transparent border-transparent hover:text-[#FF7900] hover:bg-slate-100/80';
 
   return (
-    <header className="absolute top-0 left-0 right-0 z-50 bg-white/60 backdrop-blur-sm border-b border-white/20 py-4 transition-all duration-300">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${headerBgClass}`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo / Marca Oficial */}
@@ -99,7 +133,7 @@ export default function TopBar() {
                 href={link.href}
                 aria-current={activeId === link.href.slice(1) ? 'page' : undefined}
                 className={`px-4 py-2 rounded-full text-sm font-semibold border transition-all duration-200 ${
-                  activeId === link.href.slice(1) ? PILL_ACTIVE : PILL_INACTIVE
+                  activeId === link.href.slice(1) ? pillActiveClass : pillInactiveClass
                 }`}
               >
                 {link.label}
@@ -115,7 +149,9 @@ export default function TopBar() {
               rel="noopener noreferrer"
               aria-label={`Acessar Instagram ${companyData.instagramHandle}`}
               title={`Instagram ${companyData.instagramHandle}`}
-              className="w-11 h-11 rounded-2xl bg-white hover:bg-slate-50 border border-slate-200/80 shadow-md flex items-center justify-center transition-all duration-200 hover:scale-105 hover:-translate-y-0.5"
+              className={`w-11 h-11 rounded-2xl bg-white hover:bg-slate-50 shadow-md flex items-center justify-center transition-all duration-200 hover:scale-105 hover:-translate-y-0.5 border ${
+                isDarkTheme ? 'border-white/20' : 'border-slate-200/80'
+              }`}
             >
               <InstagramBadgeIcon className="w-6 h-6" />
             </a>
@@ -138,7 +174,9 @@ export default function TopBar() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Acessar Instagram ${companyData.instagramHandle}`}
-              className="w-10 h-10 rounded-xl bg-white border border-slate-200/80 shadow-sm flex items-center justify-center transition-transform active:scale-95"
+              className={`w-10 h-10 rounded-xl bg-white shadow-sm flex items-center justify-center transition-transform active:scale-95 border ${
+                isDarkTheme ? 'border-white/20' : 'border-slate-200/80'
+              }`}
             >
               <InstagramBadgeIcon className="w-5 h-5" />
             </a>
@@ -146,7 +184,11 @@ export default function TopBar() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg text-slate-700 hover:text-[#FF7900] hover:bg-white/50 focus:outline-none"
+              className={`p-2 rounded-lg transition-colors focus:outline-none ${
+                isDarkTheme
+                  ? 'text-white hover:text-[#FF7900] hover:bg-white/10'
+                  : 'text-slate-800 hover:text-[#FF7900] hover:bg-slate-100'
+              }`}
               aria-label="Abrir menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -155,9 +197,15 @@ export default function TopBar() {
         </div>
       </div>
 
-      {/* Menu Mobile Retrátil com Glassmorphism */}
+      {/* Menu Mobile Retrátil Adaptável ao Tema Atual */}
       {mobileMenuOpen && (
-        <div className="md:hidden glass-nav mt-3 border-t border-white/30 px-4 pt-4 pb-6 space-y-3 shadow-xl">
+        <div
+          className={`md:hidden backdrop-blur-md mt-3 px-4 pt-4 pb-6 space-y-3 shadow-xl border-t transition-colors duration-300 ${
+            isDarkTheme
+              ? 'bg-[#161616]/95 border-white/10'
+              : 'bg-white/95 border-slate-200/70'
+          }`}
+        >
           <nav className="flex flex-col space-y-2">
             {navLinks.map((link) => (
               <a
@@ -166,7 +214,7 @@ export default function TopBar() {
                 onClick={() => setMobileMenuOpen(false)}
                 aria-current={activeId === link.href.slice(1) ? 'page' : undefined}
                 className={`px-4 py-2.5 rounded-full text-base font-semibold border transition-all duration-200 ${
-                  activeId === link.href.slice(1) ? PILL_ACTIVE : PILL_INACTIVE
+                  activeId === link.href.slice(1) ? pillActiveClass : pillInactiveClass
                 }`}
               >
                 {link.label}

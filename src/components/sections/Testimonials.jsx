@@ -60,7 +60,7 @@ export default function Testimonials() {
                         <h3 className="font-bold text-slate-900 text-sm truncate leading-tight">
                           {t.name}
                         </h3>
-                        <p className="text-[11px] text-slate-500 truncate mt-0.5">
+                        <p className="text-[11px] text-slate-600 truncate mt-0.5">
                           {t.meta}
                         </p>
                       </div>
@@ -85,7 +85,7 @@ export default function Testimonials() {
 
                 {/* Rodapé: Selo Google + Botão Continuar lendo */}
                 <div className="pt-4 mt-4 border-t border-slate-200/80 flex items-center justify-between text-xs">
-                  <div className="flex items-center gap-1.5 text-emerald-600 font-semibold">
+                  <div className="flex items-center gap-1.5 text-emerald-800 font-semibold">
                     <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                       <circle cx="12" cy="12" r="10" />
                       <polyline points="9 11 12 14 22 4" />
@@ -97,7 +97,7 @@ export default function Testimonials() {
                     <button
                       type="button"
                       onClick={() => setActiveModalItem(t)}
-                      className="inline-flex items-center gap-1 font-semibold text-slate-700 hover:text-[#FF7900] transition-colors focus:outline-none cursor-pointer"
+                      className="inline-flex items-center gap-1 font-semibold text-slate-700 hover:text-[#B44600] transition-colors focus:outline-none cursor-pointer"
                     >
                       <span>Continuar lendo</span>
                       <ArrowRight className="w-3.5 h-3.5" />
@@ -106,7 +106,7 @@ export default function Testimonials() {
                     <button
                       type="button"
                       onClick={() => setActiveModalItem(t)}
-                      className="inline-flex items-center gap-1 font-medium text-slate-500 hover:text-slate-700 transition-colors focus:outline-none cursor-pointer"
+                      className="inline-flex items-center gap-1 font-medium text-slate-600 hover:text-slate-800 transition-colors focus:outline-none cursor-pointer"
                     >
                       <span>Ver relato</span>
                       <ArrowRight className="w-3.5 h-3.5" />
@@ -154,7 +154,7 @@ export default function Testimonials() {
                 <h3 id="modal-author" className="font-extrabold text-slate-900 text-lg sm:text-xl leading-snug">
                   {activeModalItem.name}
                 </h3>
-                <div className="flex items-center gap-2 text-xs text-slate-500 mt-0.5">
+                <div className="flex items-center gap-2 text-xs text-slate-600 mt-0.5">
                   <span>{activeModalItem.meta}</span>
                   <span>•</span>
                   <span>{activeModalItem.timeAgo}</span>
@@ -171,8 +171,8 @@ export default function Testimonials() {
                 <span className="text-xs font-bold text-slate-700 ml-1">5.0 / 5.0</span>
               </div>
 
-              <div className="flex items-center gap-1.5 text-xs text-emerald-700 font-semibold bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
-                <svg className="w-3.5 h-3.5 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <div className="flex items-center gap-1.5 text-xs text-emerald-800 font-semibold bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
+                <svg className="w-3.5 h-3.5 text-emerald-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <circle cx="12" cy="12" r="10" />
                   <polyline points="9 11 12 14 22 4" />
                 </svg>
@@ -192,7 +192,7 @@ export default function Testimonials() {
               <button
                 type="button"
                 onClick={() => setActiveModalItem(null)}
-                className="px-6 py-2.5 rounded-full text-sm font-bold text-white bg-[#FF7900] hover:bg-[#E06800] transition-colors shadow-md shadow-[#FF7900]/25"
+                className="px-6 py-2.5 rounded-full text-sm font-extrabold text-slate-950 bg-[#FF7900] hover:bg-[#E06800] transition-colors shadow-md shadow-[#FF7900]/25"
               >
                 Fechar
               </button>

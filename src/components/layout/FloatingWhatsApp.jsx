@@ -9,7 +9,7 @@ export default function FloatingWhatsApp() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Fale conosco no WhatsApp"
-        className="group relative flex items-center gap-2.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white pl-3.5 pr-5 py-3 rounded-full shadow-lg shadow-black/30 hover:shadow-xl transition-all duration-300 hover:scale-105"
+        className="group relative flex items-center gap-2.5 bg-[#15803D] hover:bg-[#166534] text-white pl-3.5 pr-5 py-3 rounded-full shadow-lg shadow-black/30 hover:shadow-xl transition-all duration-300 hover:scale-105"
       >
         {/* Ícone Oficial do WhatsApp */}
         <svg

@@ -53,7 +53,7 @@ export default function HowItWorks() {
                     <div className="w-12 h-12 rounded-xl bg-[#FF7900]/15 text-[#FF7900] flex items-center justify-center">
                       <Icon className="w-6 h-6" />
                     </div>
-                    <span className="text-3xl font-black text-slate-300">
+                    <span className="text-3xl font-black text-slate-500">
                       {step.number}
                     </span>
                   </div>
@@ -66,8 +66,8 @@ export default function HowItWorks() {
                   </p>
                 </div>
 
-                <div className="pt-6 mt-6 border-t border-slate-200/80 flex items-center gap-2 text-xs text-[#E06800] font-semibold">
-                  <Check className="w-4 h-4 text-[#65A51C]" />
+                <div className="pt-6 mt-6 border-t border-slate-200/80 flex items-center gap-2 text-xs text-[#B44600] font-semibold">
+                  <Check className="w-4 h-4 text-[#3B630E]" />
                   <span>Atendimento rápido e descomplicado</span>
                 </div>
               </div>

@@ -5,7 +5,7 @@ export default function SectionHeader({
   badgeVariant = 'emerald',
   title,
   titleHighlight,
-  highlightClassName = 'text-[#FF7900]',
+  highlightClassName,
   description,
   align = 'center',
   className = '',
@@ -16,15 +16,18 @@ export default function SectionHeader({
     left: 'text-left mr-auto',
   };
 
+  const resolvedHighlightClass =
+    highlightClassName || (light ? 'text-[#FF7900]' : 'text-[#C24E00]');
+
   return (
     <div className={`max-w-3xl mb-12 sm:mb-16 ${alignStyles[align]} ${className}`}>
       {badge && (
         <div className="mb-3">
           <span className={`inline-block px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-widest ${
             badgeVariant === 'orange' || badgeVariant === 'brand'
-              ? 'bg-[#FF7900] text-white shadow-sm'
+              ? 'bg-[#FF7900] text-slate-950 shadow-sm'
               : badgeVariant === 'green' || badgeVariant === 'emerald'
-              ? 'bg-[#65A51C] text-white shadow-sm'
+              ? 'bg-[#65A51C] text-slate-950 shadow-sm'
               : badgeVariant === 'brown'
               ? 'bg-[#8B4A25] text-white shadow-sm border border-white/15'
               : badgeVariant === 'amber'
@@ -41,7 +44,7 @@ export default function SectionHeader({
       }`}>
         {title}{' '}
         {titleHighlight && (
-          <span className={`${highlightClassName} block sm:inline`}>
+          <span className={`${resolvedHighlightClass} block sm:inline`}>
             {titleHighlight}
           </span>
         )}

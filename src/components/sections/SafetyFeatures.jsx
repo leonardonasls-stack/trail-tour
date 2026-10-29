@@ -64,8 +64,8 @@ export default function SafetyFeatures() {
                   </p>
                 </div>
                 
-                <div className="pt-4 mt-4 border-t border-slate-200/60 flex items-center gap-1.5 text-xs font-semibold text-[#65A51C]">
-                  <CheckCircle2 className="w-4 h-4 text-[#65A51C]" />
+                <div className="pt-4 mt-4 border-t border-slate-200/60 flex items-center gap-1.5 text-xs font-semibold text-[#3B630E]">
+                  <CheckCircle2 className="w-4 h-4 text-[#3B630E]" />
                   <span>Padrão Milagres Adventure</span>
                 </div>
               </GlassCard>

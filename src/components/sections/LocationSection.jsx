@@ -49,7 +49,7 @@ export default function LocationSection() {
                   <p className="text-sm text-slate-700 mt-1">
                     {companyData.hours}
                   </p>
-                  <span className="text-xs text-[#65A51C] font-bold block mt-0.5">
+                  <span className="text-xs text-[#3B630E] font-bold block mt-0.5">
                     Saídas com agendamento prévio
                   </span>
                 </div>
@@ -107,7 +107,7 @@ export default function LocationSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
                 
                 <div className="absolute bottom-6 left-6 right-6 text-white text-left">
-                  <span className="px-3 py-1 rounded-full text-xs font-black uppercase bg-[#FF7900] text-white inline-block mb-2 shadow-md">
+                  <span className="px-3 py-1 rounded-full text-xs font-black uppercase bg-[#FF7900] text-slate-950 inline-block mb-2 shadow-md">
                     Ponto Estratégico
                   </span>
                   <h3 className="text-xl sm:text-2xl font-black">

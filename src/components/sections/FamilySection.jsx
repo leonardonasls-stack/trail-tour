@@ -15,7 +15,7 @@ export default function FamilySection() {
           {/* Coluna de Texto */}
           <div className="lg:col-span-7 space-y-5 text-left">
             <div>
-              <span className="inline-block px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-widest bg-[#FF7900] text-white shadow-sm">
+              <span className="inline-block px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-widest bg-[#FF7900] text-slate-950 shadow-sm">
                 Passeio Apto Para Toda Família
               </span>
             </div>

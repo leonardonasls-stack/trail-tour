@@ -103,7 +103,7 @@ export default function FaqSection() {
             href={getWhatsAppUrl("Olá! Gostaria de tirar uma dúvida e planejar meu passeio de quadriciclo.")}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#FF7900] hover:bg-[#E06800] text-white font-bold text-sm shadow-md shadow-[#FF7900]/20 transition-all duration-300 hover:-translate-y-0.5 shrink-0"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#FF7900] hover:bg-[#E06800] text-slate-950 font-extrabold text-sm shadow-md shadow-[#FF7900]/20 transition-all duration-300 hover:-translate-y-0.5 shrink-0"
           >
             <span>Conversar com a equipe</span>
             <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />

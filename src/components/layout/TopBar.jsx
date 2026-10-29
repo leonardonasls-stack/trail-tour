@@ -100,11 +100,11 @@ export default function TopBar() {
 
   const pillActiveClass = isDarkTheme
     ? 'text-[#FF7900] bg-[#FF7900]/15 border-[#FF7900]/40 shadow-sm'
-    : 'text-[#FF7900] bg-gradient-to-b from-white to-orange-50 border-[#FF7900]/40 shadow-[0_1px_2px_rgba(255,121,0,0.12),0_4px_10px_-2px_rgba(255,121,0,0.25)]';
+    : 'text-[#B44600] bg-gradient-to-b from-white to-orange-50 border-[#FF7900]/40 shadow-[0_1px_2px_rgba(255,121,0,0.12),0_4px_10px_-2px_rgba(255,121,0,0.25)]';
 
   const pillInactiveClass = isDarkTheme
     ? 'text-zinc-100 bg-transparent border-transparent hover:text-[#FF7900] hover:bg-white/10'
-    : 'text-slate-700 bg-transparent border-transparent hover:text-[#FF7900] hover:bg-slate-100/80';
+    : 'text-slate-700 bg-transparent border-transparent hover:text-[#B44600] hover:bg-slate-100/80';
 
   return (
     <header
@@ -160,9 +160,9 @@ export default function TopBar() {
               href={getWhatsAppUrl()}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold text-white bg-[#FF7900] hover:bg-[#E06800] transition-all shadow-md shadow-[#FF7900]/25 hover:shadow-lg hover:shadow-[#FF7900]/35 hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-extrabold text-slate-950 bg-[#FF7900] hover:bg-[#E06800] transition-all shadow-md shadow-[#FF7900]/25 hover:shadow-lg hover:shadow-[#FF7900]/35 hover:-translate-y-0.5"
             >
-              <MessageCircle className="w-4 h-4 fill-white" />
+              <MessageCircle className="w-4 h-4 fill-slate-950" />
               <span>Consultar Vagas</span>
             </a>
           </div>
@@ -187,7 +187,7 @@ export default function TopBar() {
               className={`p-2 rounded-lg transition-colors focus:outline-none ${
                 isDarkTheme
                   ? 'text-white hover:text-[#FF7900] hover:bg-white/10'
-                  : 'text-slate-800 hover:text-[#FF7900] hover:bg-slate-100'
+                  : 'text-slate-800 hover:text-[#B44600] hover:bg-slate-100'
               }`}
               aria-label="Abrir menu"
             >
@@ -226,9 +226,9 @@ export default function TopBar() {
               href={getWhatsAppUrl()}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-base font-bold text-white bg-[#FF7900] hover:bg-[#E06800] shadow-md shadow-[#FF7900]/25"
+              className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-base font-extrabold text-slate-950 bg-[#FF7900] hover:bg-[#E06800] shadow-md shadow-[#FF7900]/25"
             >
-              <MessageCircle className="w-5 h-5 fill-white" />
+              <MessageCircle className="w-5 h-5 fill-slate-950" />
               <span>Chamar no WhatsApp</span>
             </a>
           </div>

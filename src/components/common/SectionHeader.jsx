@@ -5,6 +5,7 @@ export default function SectionHeader({
   badgeVariant = 'emerald',
   title,
   titleHighlight,
+  highlightClassName = 'text-[#FF7900]',
   description,
   align = 'center',
   className = '',
@@ -24,9 +25,11 @@ export default function SectionHeader({
               ? 'bg-[#FF7900] text-white shadow-sm'
               : badgeVariant === 'green' || badgeVariant === 'emerald'
               ? 'bg-[#65A51C] text-white shadow-sm'
+              : badgeVariant === 'brown'
+              ? 'bg-[#8B4A25] text-white shadow-sm border border-white/15'
               : badgeVariant === 'amber'
-              ? 'bg-amber-500 text-slate-950'
-              : 'bg-[#161616] text-white border border-white/10'
+              ? 'bg-amber-400 text-slate-950 shadow-sm'
+              : 'bg-[#161616] text-white border border-white/15 shadow-sm'
           }`}>
             {badge}
           </span>
@@ -38,7 +41,7 @@ export default function SectionHeader({
       }`}>
         {title}{' '}
         {titleHighlight && (
-          <span className="text-[#FF7900] block sm:inline">
+          <span className={`${highlightClassName} block sm:inline`}>
             {titleHighlight}
           </span>
         )}
@@ -46,7 +49,7 @@ export default function SectionHeader({
 
       {description && (
         <p className={`mt-4 text-base sm:text-lg leading-relaxed ${
-          light ? 'text-slate-300' : 'text-slate-600'
+          light ? 'text-zinc-100' : 'text-slate-600'
         }`}>
           {description}
         </p>

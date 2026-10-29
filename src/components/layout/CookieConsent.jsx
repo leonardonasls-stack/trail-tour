@@ -149,11 +149,8 @@ export default function CookieConsent({
               </div>
               <div>
                 <h2 className="text-sm sm:text-base font-extrabold text-white leading-tight">
-                  Sua Privacidade & Cookies (LGPD)
+                  Politica de Privacidade
                 </h2>
-                <span className="text-[11px] text-zinc-300 block">
-                  Lei nº 13.709/2018 · Transparência e Controle
-                </span>
               </div>
             </div>
           </div>
@@ -243,7 +240,7 @@ export default function CookieConsent({
               Rejeitar não essenciais
             </button>
 
-            {showCustomize ? (
+            {showCustomize && (
               <button
                 type="button"
                 onClick={handleSaveCustom}
@@ -251,15 +248,6 @@ export default function CookieConsent({
               >
                 <Check className="w-4 h-4" />
                 <span>Salvar escolha</span>
-              </button>
-            ) : (
-              <button
-                type="button"
-                onClick={() => setShowCustomize(true)}
-                className="w-full sm:w-auto px-3.5 py-2.5 rounded-xl text-xs font-semibold text-zinc-200 hover:text-white bg-transparent hover:bg-white/5 border border-white/10 transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
-              >
-                <SlidersHorizontal className="w-3.5 h-3.5" />
-                <span>Personalizar</span>
               </button>
             )}
           </div>

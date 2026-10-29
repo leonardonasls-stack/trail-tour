@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Compass, MessageCircle } from 'lucide-react';
+import { Menu, X, MessageCircle } from 'lucide-react';
 import { companyData } from '../../data/company';
 import { getWhatsAppUrl } from '../../utils/whatsappLink';
 
@@ -8,21 +8,44 @@ const PILL_ACTIVE =
 const PILL_INACTIVE =
   'text-slate-700 bg-transparent border-transparent hover:text-[#FF7900] hover:bg-white/60';
 
-export default function TopBar() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+function InstagramBadgeIcon({ className = "w-7 h-7" }) {
+  return (
+    <svg viewBox="0 0 48 48" fill="none" className={className} aria-hidden="true">
+      <defs>
+        <radialGradient id="ig-grad-topbar" cx="25%" cy="105%" r="125%">
+          <stop offset="0%" stopColor="#FFDD55" />
+          <stop offset="10%" stopColor="#FFDD55" />
+          <stop offset="50%" stopColor="#FF543E" />
+          <stop offset="100%" stopColor="#C837AB" />
+        </radialGradient>
+      </defs>
+      <rect
+        x="6"
+        y="6"
+        width="36"
+        height="36"
+        rx="10"
+        stroke="url(#ig-grad-topbar)"
+        strokeWidth="4"
+      />
+      <circle
+        cx="24"
+        cy="24"
+        r="8.5"
+        stroke="url(#ig-grad-topbar)"
+        strokeWidth="4"
+      />
+      <circle cx="34" cy="14" r="2.6" fill="url(#ig-grad-topbar)" />
+    </svg>
+  );
+}
 
+export default function TopBar() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeId, setActiveId] = useState('inicio');
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-
-      // Scroll-spy: última seção cujo topo já passou da altura do header
       const offset = 140;
       let current = navLinks[0].href.slice(1);
       for (const link of navLinks) {
@@ -31,7 +54,6 @@ export default function TopBar() {
           current = link.href.slice(1);
         }
       }
-      // Fim da página: força o último item
       if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
         current = navLinks[navLinks.length - 1].href.slice(1);
       }
@@ -53,13 +75,7 @@ export default function TopBar() {
   ];
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'glass-nav py-3'
-          : 'bg-white/60 backdrop-blur-sm border-b border-white/20 py-4'
-      }`}
-    >
+    <header className="absolute top-0 left-0 right-0 z-50 bg-white/60 backdrop-blur-sm border-b border-white/20 py-4 transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo / Marca Oficial */}
@@ -91,8 +107,19 @@ export default function TopBar() {
             ))}
           </nav>
 
-          {/* CTA Desktop */}
-          <div className="hidden md:flex items-center">
+          {/* Ações Desktop: Instagram + CTA WhatsApp */}
+          <div className="hidden md:flex items-center gap-3">
+            <a
+              href={companyData.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Acessar Instagram ${companyData.instagramHandle}`}
+              title={`Instagram ${companyData.instagramHandle}`}
+              className="w-11 h-11 rounded-2xl bg-white hover:bg-slate-50 border border-slate-200/80 shadow-md flex items-center justify-center transition-all duration-200 hover:scale-105 hover:-translate-y-0.5"
+            >
+              <InstagramBadgeIcon className="w-6 h-6" />
+            </a>
+
             <a
               href={getWhatsAppUrl()}
               target="_blank"
@@ -104,8 +131,18 @@ export default function TopBar() {
             </a>
           </div>
 
-          {/* Botão Mobile Hamburger */}
-          <div className="flex md:hidden">
+          {/* Ações Mobile: Instagram + Botão Hamburger */}
+          <div className="flex md:hidden items-center gap-2">
+            <a
+              href={companyData.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Acessar Instagram ${companyData.instagramHandle}`}
+              className="w-10 h-10 rounded-xl bg-white border border-slate-200/80 shadow-sm flex items-center justify-center transition-transform active:scale-95"
+            >
+              <InstagramBadgeIcon className="w-5 h-5" />
+            </a>
+
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

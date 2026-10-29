@@ -1,9 +1,9 @@
 import React from 'react';
-import { Compass, Instagram, Phone, MapPin, Heart, Shield } from 'lucide-react';
+import { Instagram, Phone, MapPin, Shield, Cookie, FileText } from 'lucide-react';
 import { companyData } from '../../data/company';
 import { getWhatsAppUrl } from '../../utils/whatsappLink';
 
-export default function Footer() {
+export default function Footer({ onOpenPrivacyPolicy, onOpenCookiePreferences }) {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -28,7 +28,7 @@ export default function Footer() {
           {/* Coluna 2 - Roteiros Rápidos */}
           <div className="space-y-3">
             <h4 className="text-sm font-bold text-white uppercase tracking-wider">Roteiros</h4>
-            <ul className="space-y-2 text-xs sm:text-sm">
+            <ul className="space-y-2 text-xs sm:text-sm text-zinc-300">
               <li>
                 <a href="#roteiros" className="hover:text-[#FF7900] transition-colors">
                   Circuito Praias & Piscinas
@@ -52,18 +52,13 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Coluna 3 - Informações Úteis */}
+          {/* Coluna 3 - Informações Úteis & Privacidade LGPD */}
           <div className="space-y-3">
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider">Informações</h4>
-            <ul className="space-y-2 text-xs sm:text-sm">
+            <h4 className="text-sm font-bold text-white uppercase tracking-wider">Informações & LGPD</h4>
+            <ul className="space-y-2 text-xs sm:text-sm text-zinc-300">
               <li>
                 <a href="#duvidas" className="hover:text-[#FF7900] transition-colors">
                   Dúvidas sobre CNH & Regras
-                </a>
-              </li>
-              <li>
-                <a href="#duvidas" className="hover:text-[#FF7900] transition-colors">
-                  Equipamentos Inclusos
                 </a>
               </li>
               <li>
@@ -72,9 +67,24 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#contato" className="hover:text-[#FF7900] transition-colors">
-                  Localização da Base
-                </a>
+                <button
+                  type="button"
+                  onClick={onOpenPrivacyPolicy}
+                  className="inline-flex items-center gap-1.5 text-zinc-300 hover:text-[#FF7900] transition-colors text-left cursor-pointer focus:outline-none"
+                >
+                  <FileText className="w-3.5 h-3.5 text-[#FF7900] shrink-0" />
+                  <span>Política de Privacidade e Cookies</span>
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  onClick={onOpenCookiePreferences}
+                  className="inline-flex items-center gap-1.5 text-zinc-300 hover:text-[#FF7900] transition-colors text-left cursor-pointer focus:outline-none"
+                >
+                  <Cookie className="w-3.5 h-3.5 text-[#FF7900] shrink-0" />
+                  <span>Preferências de Cookies (LGPD)</span>
+                </button>
               </li>
             </ul>
           </div>
@@ -82,7 +92,7 @@ export default function Footer() {
           {/* Coluna 4 - Contato Direto */}
           <div className="space-y-3">
             <h4 className="text-sm font-bold text-white uppercase tracking-wider">Atendimento</h4>
-            <ul className="space-y-2 text-xs sm:text-sm">
+            <ul className="space-y-2 text-xs sm:text-sm text-zinc-300">
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-[#FF7900] shrink-0" />
                 <a
@@ -105,7 +115,7 @@ export default function Footer() {
                   {companyData.instagramHandle}
                 </a>
               </li>
-              <li className="flex items-start gap-2 pt-1 text-slate-300">
+              <li className="flex items-start gap-2 pt-1 text-zinc-300">
                 <MapPin className="w-4 h-4 text-[#65A51C] shrink-0 mt-0.5" />
                 <span>{companyData.address}</span>
               </li>
@@ -114,11 +124,11 @@ export default function Footer() {
 
         </div>
 
-        {/* Linha Inferior de Direitos Autorais */}
+        {/* Linha Inferior de Direitos Autorais e Conformidade LGPD */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-400 gap-4">
           <p>© {currentYear} {companyData.name}. Todos os direitos reservados.</p>
           <p className="flex items-center gap-1.5 text-zinc-400">
-            Segurança em 1º Lugar <Shield className="w-3.5 h-3.5 text-[#65A51C]" /> São Miguel dos Milagres - AL
+            Segurança em 1º Lugar <Shield className="w-3.5 h-3.5 text-[#65A51C]" /> Conformidade LGPD (Lei 13.709/2018)
           </p>
         </div>
 

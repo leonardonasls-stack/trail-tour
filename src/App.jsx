@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import TopBar from './components/layout/TopBar';
 import Footer from './components/layout/Footer';
 import FloatingWhatsApp from './components/layout/FloatingWhatsApp';
+import CookieConsent from './components/layout/CookieConsent';
 import HeroSection from './components/sections/HeroSection';
 import TrustBadges from './components/sections/TrustBadges';
 import RoutesSection from './components/sections/RoutesSection';
@@ -15,9 +16,12 @@ import FaqSection from './components/sections/FaqSection';
 import LocationSection from './components/sections/LocationSection';
 
 export default function App() {
+  const [policyModalOpen, setPolicyModalOpen] = useState(false);
+  const [preferencesOpenRequest, setPreferencesOpenRequest] = useState(false);
+
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col font-sans selection:bg-amber-400 selection:text-slate-950">
-      {/* Barra de Navegação Fixa com Glassmorphism */}
+      {/* Barra de Navegação Adaptativa com Glassmorphism */}
       <TopBar />
 
       {/* Conteúdo Principal da SPA */}
@@ -56,8 +60,19 @@ export default function App() {
         <LocationSection />
       </main>
 
-      {/* Rodapé Institucional */}
-      <Footer />
+      {/* Rodapé Institucional com Atalhos LGPD */}
+      <Footer
+        onOpenPrivacyPolicy={() => setPolicyModalOpen(true)}
+        onOpenCookiePreferences={() => setPreferencesOpenRequest(true)}
+      />
+
+      {/* Banner de Consentimento Granular + Modal de Política de Privacidade e Cookies (LGPD) */}
+      <CookieConsent
+        policyModalOpen={policyModalOpen}
+        setPolicyModalOpen={setPolicyModalOpen}
+        preferencesOpenRequest={preferencesOpenRequest}
+        setPreferencesOpenRequest={setPreferencesOpenRequest}
+      />
 
       {/* Botão Flutuante de Conversão Contínua no WhatsApp */}
       <FloatingWhatsApp />

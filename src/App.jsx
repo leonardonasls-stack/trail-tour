@@ -7,6 +7,7 @@ import TrustBadges from './components/sections/TrustBadges';
 import RoutesSection from './components/sections/RoutesSection';
 import FleetSection from './components/sections/FleetSection';
 import SafetyFeatures from './components/sections/SafetyFeatures';
+import FamilySection from './components/sections/FamilySection';
 import HowItWorks from './components/sections/HowItWorks';
 import GallerySection from './components/sections/GallerySection';
 import Testimonials from './components/sections/Testimonials';
@@ -36,19 +37,22 @@ export default function App() {
         {/* 5. Segurança Avançada, Guias Nativos & Treinamento */}
         <SafetyFeatures />
 
-        {/* 6. Como Funciona o Agendamento (Passo a passo) */}
+        {/* 6. Passeio Apto Para Toda Família (Seção Dedicada) */}
+        <FamilySection />
+
+        {/* 7. Como Funciona o Agendamento (Passo a passo) */}
         <HowItWorks />
 
-        {/* 7. Galeria com Fotos Reais dos Passeios */}
+        {/* 8. Galeria com Fotos Reais dos Passeios */}
         <GallerySection />
 
-        {/* 8. Depoimentos e Avaliações de Turistas Reais */}
+        {/* 9. Depoimentos e Avaliações de Turistas Reais */}
         <Testimonials />
 
-        {/* 9. Perguntas Frequentes & Mitigação de Dúvidas (Acordeão) */}
+        {/* 10. Perguntas Frequentes & Mitigação de Dúvidas (Acordeão) */}
         <FaqSection />
 
-        {/* 10. Localização da Base & Ponto de Saída */}
+        {/* 11. Localização da Base & Ponto de Saída */}
         <LocationSection />
       </main>
 

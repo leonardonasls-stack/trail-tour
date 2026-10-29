@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, Compass, Sparkles, CheckCircle2, Award, HeartHandshake } from 'lucide-react';
+import { ShieldCheck, Compass, Sparkles, CheckCircle2 } from 'lucide-react';
 import SectionHeader from '../common/SectionHeader';
 import GlassCard from '../common/GlassCard';
 
@@ -71,45 +71,6 @@ export default function SafetyFeatures() {
               </GlassCard>
             );
           })}
-        </div>
-
-        {/* Faixa em Destaque com Imagem Real de Turistas com Capacete */}
-        <div className="mt-16 rounded-3xl overflow-hidden bg-[#161616] text-white p-8 sm:p-12 relative border border-white/10 shadow-xl">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            
-            <div className="lg:col-span-7 space-y-4 text-left">
-              <span className="inline-block px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-[#FF7900]/25 text-[#FF7900] border border-[#FF7900]/40">
-                Passeio Apto Para Toda Família
-              </span>
-              <h3 className="text-2xl sm:text-3xl font-black leading-tight text-white">
-                Pilote com tranquilidade: você no comando, nós no apoio
-              </h3>
-              <p className="text-zinc-100 text-sm sm:text-base leading-relaxed">
-                Nossos guias acompanham o grupo durante todo o trajeto em velocidade controlada, prestando assistência imediata, tirando fotos profissionais e garantindo que ninguém fique para trás.
-              </p>
-              <div className="flex flex-wrap gap-4 pt-2">
-                <div className="flex items-center gap-2 text-xs font-bold text-white">
-                  <Award className="w-4 h-4 text-[#FF7900]" />
-                  <span>100% dos guias capacitados</span>
-                </div>
-                <div className="flex items-center gap-2 text-xs font-bold text-white">
-                  <HeartHandshake className="w-4 h-4 text-[#65A51C]" />
-                  <span>Atendimento humanizado</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="lg:col-span-5">
-              <div className="rounded-2xl overflow-hidden border border-white/15 aspect-[4/3] shadow-lg">
-                <img
-                  src="/images/turistas_grupo_10.jpeg"
-                  alt="Turistas com capacetes equipados para trilha"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-
-          </div>
         </div>
 
       </div>

@@ -2,11 +2,10 @@ import React from 'react';
 import { routesData } from '../../data/routesData';
 import SectionHeader from '../common/SectionHeader';
 import RouteCard from './RouteCard';
-import { Compass } from 'lucide-react';
 
 export default function RoutesSection() {
   return (
-    <section id="roteiros" className="py-20 sm:py-28 bg-slate-100/80 relative">
+    <section id="roteiros" className="py-20 sm:py-28 bg-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Cabeçalho da Seção */}
@@ -26,7 +25,7 @@ export default function RoutesSection() {
         </div>
 
         {/* Rodapé da Seção com Aviso Amigável */}
-        <div className="mt-12 text-center max-w-xl mx-auto p-4 rounded-xl bg-white/70 backdrop-blur-sm border border-slate-200/60 shadow-sm">
+        <div className="mt-12 text-center max-w-xl mx-auto p-4 rounded-xl bg-slate-50 border border-slate-200/80 shadow-sm">
           <p className="text-xs sm:text-sm text-slate-600">
             💡 <strong>Passeios privativos ou grupos maiores?</strong> Fale conosco no WhatsApp para personalizarmos seu combo com saídas exclusivas.
           </p>

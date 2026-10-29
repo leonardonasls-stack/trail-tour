@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Camera, Instagram, ExternalLink, X, ChevronLeft, ChevronRight, ZoomIn } from 'lucide-react';
+import { Instagram, X, ChevronLeft, ChevronRight, ZoomIn } from 'lucide-react';
 import { galleryData } from '../../data/galleryData';
 import { companyData } from '../../data/company';
 import SectionHeader from '../common/SectionHeader';
@@ -57,8 +57,11 @@ export default function GallerySection() {
   const loopItems = [...galleryData, ...galleryData];
 
   return (
-    <section id="galeria" className="py-20 sm:py-28 bg-slate-100/70 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="galeria" className="py-20 sm:py-28 bg-[#161616] text-white relative overflow-hidden">
+      {/* Background Accent */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#FF7900]/10 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Cabeçalho */}
         <SectionHeader
@@ -67,11 +70,12 @@ export default function GallerySection() {
           title="Cenários Reais de"
           titleHighlight="São Miguel dos Milagres"
           description="Confira alguns dos momentos vividos por nossos turistas ao longo das praias, trilhas ecológicas e mirantes da Costa dos Corais."
+          light={true}
         />
       </div>
 
       {/* Carrossel horizontal: contido no container max-w-7xl e com cards em proporção ajustada */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="gallery-marquee mt-4 rounded-3xl" role="region" aria-label="Galeria de fotos">
           <div className="gallery-track">
             {loopItems.map((item, i) => {
@@ -85,7 +89,7 @@ export default function GallerySection() {
                   aria-hidden={isClone ? 'true' : undefined}
                   tabIndex={isClone ? -1 : 0}
                   aria-label={`Ampliar foto: ${item.title}`}
-                  className="relative shrink-0 mr-4 w-60 sm:w-72 h-44 sm:h-52 rounded-2xl overflow-hidden group shadow-md border border-white/50 bg-slate-200 cursor-zoom-in focus:outline-none focus-visible:ring-4 focus-visible:ring-[#FF7900]/60"
+                  className="relative shrink-0 mr-4 w-60 sm:w-72 h-44 sm:h-52 rounded-2xl overflow-hidden group shadow-lg border border-white/15 bg-white/5 cursor-zoom-in focus:outline-none focus-visible:ring-4 focus-visible:ring-[#FF7900]/60"
                 >
                   <img
                     src={item.src}
@@ -119,7 +123,7 @@ export default function GallerySection() {
           <Button
             href={companyData.instagramUrl}
             target="_blank"
-            variant="outline"
+            variant="outlineDark"
             size="md"
             icon={Instagram}
             iconPosition="left"

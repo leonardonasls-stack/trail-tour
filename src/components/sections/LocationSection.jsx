@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Clock, Phone, Navigation, Instagram, MessageCircle } from 'lucide-react';
+import { MapPin, Clock, Phone, Navigation, MessageCircle } from 'lucide-react';
 import { companyData } from '../../data/company';
 import SectionHeader from '../common/SectionHeader';
 import GlassCard from '../common/GlassCard';
@@ -10,7 +10,7 @@ export default function LocationSection() {
   const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("trail tour milagres " + companyData.address)}`;
 
   return (
-    <section id="contato" className="py-20 sm:py-28 bg-slate-100/90 relative">
+    <section id="contato" className="py-20 sm:py-28 bg-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Cabeçalho */}
@@ -26,7 +26,7 @@ export default function LocationSection() {
           
           {/* Card com Detalhes da Base */}
           <div className="lg:col-span-5 space-y-6">
-            <GlassCard className="bg-white p-6 sm:p-8 border border-slate-200/80 shadow-md space-y-6">
+            <GlassCard className="bg-slate-50/70 p-6 sm:p-8 border border-slate-200/80 shadow-md space-y-6">
               
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-xl bg-[#FF7900]/15 text-[#FF7900] flex items-center justify-center shrink-0">
@@ -67,7 +67,7 @@ export default function LocationSection() {
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-slate-100 flex flex-col gap-3">
+              <div className="pt-4 border-t border-slate-200/80 flex flex-col gap-3">
                 <Button
                   href={googleMapsUrl}
                   target="_blank"
@@ -97,7 +97,7 @@ export default function LocationSection() {
 
           {/* Mapa Visual / Ponto Turístico com Imagem da Base */}
           <div className="lg:col-span-7">
-            <div className="rounded-3xl overflow-hidden shadow-xl border border-white/80 bg-slate-900 relative group">
+            <div className="rounded-3xl overflow-hidden shadow-xl border border-slate-200/80 bg-slate-900 relative group">
               <div className="relative h-80 sm:h-96 w-full">
                 <img
                   src="/images/ponto_turistico_07.jpeg"

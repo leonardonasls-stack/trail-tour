@@ -4,6 +4,38 @@ Todas as alterações notáveis, adições de código, melhorias visuais e atual
 
 O formato segue as convenções baseadas em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
+## [1.7.0] - 2026-10-30
+### 🎨 Redesign do FAQ, Alternância de Temas, TopBar Adaptativa, Acessibilidade WCAG AA & Conformidade LGPD
+
+#### Adicionado
+- **Auditoria Completa de LGPD (`.lgpd/`) & Política de Privacidade e Cookies (`src/components/layout/CookieConsent.jsx`)**:
+  - Estruturação dos artefatos vivos de governança em `.lgpd/` (`STATUS.md`, `discovery.md`, `gaps.md`, `data-map.md`, `legal-basis.md` e `policies/privacy-policy-v1.0-draft.md`) fundamentados na Lei nº 13.709/2018 (LGPD) e Resoluções da ANPD (nº 2/2022, nº 15/2024, nº 18/2024 e nº 19/2024).
+  - **Banner de Consentimento Granular (*Opt-in* real — Art. 8º LGPD)**: Sem caixas pré-marcadas para cookies analíticos/marketing, botões de igual destaque visual (*Aceitar todos*, *Rejeitar não essenciais* e *Personalizar*) e ledger versionado *append-only* persistido em `localStorage` (`trail_tour_lgpd_consent_v1`).
+  - **Modal Interativo de Política de Privacidade e Cookies (Art. 9º e Art. 18 LGPD)**: Resumo rápido (*TL;DR*), tabela de bases legais e cookies, regras para menores acompanhados (Art. 14, § 1º) e atalhos permanentes no `Footer.jsx` para consulta e revogação a 1 clique (Art. 8º, § 5º).
+- **Nova Seção Dedicada para Famílias (`src/components/sections/FamilySection.jsx`)**:
+  - Desmembrado o antigo card interno de segurança em uma seção completa e independente da página (*"Passeio Apto Para Toda Família — Pilote com tranquilidade: você no comando, nós no apoio"*), com pílulas de credenciais, CTA próprio e fotografia em destaque.
+- **Atalho Oficial do Instagram na `TopBar.jsx`**:
+  - Adicionado botão com o ícone oficial em gradiente do Instagram na barra superior (desktop e mobile) direcionando para `@quadrimilagresadventure`.
+- **Assinatura de Desenvolvimento no Rodapé (`src/components/layout/Footer.jsx` & `public/images/logo_leo_nascimento.svg`)**:
+  - Adicionado crédito *"Desenvolvido por"* acompanhado do logotipo vetorial `[Leo nascimento] desenvolvimento de sistemas` com link direto para o portfólio oficial (`https://leonascimentodev-sooty.vercel.app/`).
+- **Configuração para Deploy em Produção na Hostinger (`public/.htaccess`, `public/robots.txt`, `public/sitemap.xml` & `vite.config.js`)**:
+  - Criado `.htaccess` otimizado para servidores Apache/LiteSpeed da Hostinger com redirecionamento HTTPS, fallback de rotas SPA, compressão GZIP/Deflate, cache de longa duração para assets estáticos e cabeçalhos de segurança (`X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`, `Permissions-Policy`).
+  - Adicionados `robots.txt` e `sitemap.xml` para indexação no Google Search Console e configurado code-splitting (`vendor` e `icons`) no `vite.config.js`.
+
+#### Modificado
+- **Novo Layout Editorial em 2 Colunas no FAQ (`src/components/sections/FaqSection.jsx`)**:
+  - Coluna esquerda com chamada empilhada (*"Antes de ir, tire suas dúvidas."*) nas cores da marca, subtítulo e fotografia panorâmica do pôr do sol; coluna direita com acordeão minimalista e barra inferior horizontal de conversão (*"Seu próximo passeio começa aqui."* + botão *"Conversar com a equipe ↗"*).
+- **Ritmo Visual Alternado entre Todas as Seções (Branco vs. Carvão Escuro `#161616` + Brilho `#FF7900/10`)**:
+  - Padronizada a alternância estrita entre seções claras (`bg-white`) e escuras (`bg-[#161616]` com brilho radial difuso `bg-[#FF7900]/10`) do Hero até o Rodapé (`RoutesSection`, `FleetSection`, `SafetyFeatures`, `FamilySection`, `HowItWorks`, `GallerySection`, `Testimonials`, `FaqSection`, `LocationSection` e `Footer`).
+- **TopBar Fixa e Adaptativa por Seção (`src/components/layout/TopBar.jsx`)**:
+  - Integrada sem borda divisória no topo do Hero (`bg-transparent`) e com detecção dinâmica em tempo real da seção sob o cabeçalho durante a rolagem, alternando automaticamente entre tema escuro (`bg-[#161616]/85`) e tema claro (`bg-white/85`).
+- **Botão Flutuante Oficial do WhatsApp (`src/components/layout/FloatingWhatsApp.jsx`)**:
+  - Atualizado com o SVG oficial do WhatsApp e rótulo **"Fale conosco"** visível em todas as telas.
+- **Correção das 38 Ocorrências de Contraste no `@axe-core/cli` (WCAG 2.1 AA)**:
+  - Ajustados os contrastes em `Button.jsx`, `SectionHeader.jsx`, `TopBar.jsx`, `SafetyFeatures.jsx`, `FamilySection.jsx`, `HowItWorks.jsx`, `Testimonials.jsx`, `FaqSection.jsx`, `LocationSection.jsx` e `FloatingWhatsApp.jsx` (texto `text-slate-950` sobre `#FF7900` com razão **6.88:1**, destaques `#C24E00` sobre branco com **4.56:1**, e verde `#15803D` com **5.02:1**).
+
+---
+
 ## [1.6.0] - 2026-10-21
 ### Commit: `c6c3192` — *Remoção de pasta dispensável e correção de visual e layout*
 
